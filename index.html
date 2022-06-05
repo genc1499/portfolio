@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chathura&family=Fredericka+the+Great&family=Open+Sans&family=Roboto:wght@300&family=Tulpen+One&display=swap" rel="stylesheet"> 
+          
+    <title>Coder Joe's</title>
+</head>
+<style>
+    html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+    
+    .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+    
+    html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+    
+    *, *:before, *:after {box-sizing: inherit}
+    
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+    html{
+        font-family: 'Roboto', sans-serif;
+        margin:0;
+        padding:0;
+        overflow-x: hidden;
+       
+    }
+    img{
+        width:100%;
+        display:inline-block;
+        object-fit: cover;
+        border-radius:5px;
+    }
+
+
+
+    /* nav////////////////////////////////////// */
+    nav{
+        padding-top: 20px;
+    }
+    .main-menu-display{
+        display:flex;
+        justify-content: flex-end;
+        margin-top:20px;
+        margin:0;
+    }
+
+    .main-menu-display a{
+        background-color:initial;
+    }
+
+    .slide-out-menu a{
+        color:white;
+        background-color: initial;
+    }
+
+    .burger-menu-button{
+        color:white;
+        visibility: hidden;
+    }
+
+    .slide-out-menu{
+        position: absolute;
+        right: -9999px;
+        top: 44px;
+        height: 25vh;
+        width: 100vw;
+        transition: .3s ease-in;
+        z-index: 100;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: black;  
+      
+    }
+    /* .slide-out-menu li::after{
+        content:'';
+        display:inline-block;
+        border-bottom:1px white solid;
+        width:100vw;
+    } */
+
+
+
+ 
+
+
+
+    /* //////////////////////////////////////////////// */
+    /* flex ul for portfolio */
+    .my-works{
+        display:flex;
+        list-style:none;
+        padding:0;
+        margin:0;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        
+    }
+
+    .my-works li{
+       
+        display:flex;
+        position:relative;
+     
+    }
+ 
+    .wrapper{
+        margin:0 auto;
+        width:85%;
+        max-width:1200px;
+    }
+    .burger-menu-button{
+        display:flex;
+        flex-direction:column;
+        height:20px;
+        justify-content: space-between;
+        position:absolute;
+        right:66px;
+        top:20px;
+    }
+
+    .burger-menu-button div{
+        background-color: white;
+        width:20px;
+        height:3px;
+        transition: .3s ease-in;
+        border-radius:10px
+
+    }
+
+    span{
+        transition: .3s ease-in;
+        display:inline-block;
+    
+    }
+
+    .jump-to-work:hover span{
+        transform: rotate(90deg);
+     
+    }
+
+    /* HIDDEN DIV WITH PROJECTS */
+    .project-details{
+        height:0;
+        width:100%;
+        top:0;
+        opacity:0;
+       position:absolute;
+        transition: .4s ease-out; 
+        background-color:grey;
+        border-radius:5px;  
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        
+    }
+    .project-details h3{
+        margin-top:0;
+        font-weight:600;
+    }
+    .project-details>*{
+        text-align: center;
+        margin-bottom:3px;
+    }
+
+ 
+    .project-details button{
+        background-color: red;
+        color:white;
+        padding:3px 6px;
+        width:50%;
+        margin:0 auto;
+        border:none;
+        border-radius:5px;
+        transition: .3s ease-in-out;
+    }
+    .fa-solid, .fa-angles-right{
+       margin-left:5px;
+   }
+
+    /* Hover on learn more button */
+    .project-details button:hover,  .project-details button:focus{
+        width:51%;
+        box-shadow: -7px 13px 18px -4px #000000;
+      
+    }
+    .project-details button:hover span,  .project-details button:focus span{
+        transform: rotate(-90deg);
+    }
+
+
+
+    .my-works li:hover .project-details{
+ 
+ height:100%;
+ opacity:.9;
+ 
+}
+
+/* ////////////////////////////////////////////////// */
+    
+/* SWEET ALERT STYLES////////////////////// */
+    a{
+        text-decoration:none;
+       
+
+    }
+
+    .live-link{
+        background-color: red;
+        color:white;
+        padding:2px 3px;
+        border-radius:5px;
+        margin-left:3%;
+        font-size:.8rem;
+        
+        
+    }
+
+    .link-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+       
+     
+    }
+
+    header{
+        background-color:black;
+        height:80vh;
+        width:100vw;
+       position: relative;
+    }
+    header a{
+        width:20%;
+        background-color:rgb(139, 9, 9);
+        padding:10px 20px;
+        color:white;
+        border-radius:5px;
+        transition:.3s ease-in;
+    }
+   
+ 
+h1{
+    font-size: 4rem;
+    color:white;
+}
+
+header h2{
+    color:white;
+    font-size:2rem;
+    margin-top:-50px;
+    font-style:italic;
+}
+
+.alert-text{
+    text-align:left;
+    margin-bottom:-10px;
+    font-size:.8 rem;
+    z-index:100;
+
+}
+
+h2.js-scroll {
+    position:relative;
+        right:-999px;
+    transition:.4s ease-in-out;
+}
+
+.js-scroll.my-works li{
+    transition:.4s ease-in-out;
+    width:0; 
+}
+
+.js-scroll.scrolled.my-works li{
+    width:33%;
+}
+
+
+h2.js-scroll.scrolled{
+    width:100%;
+    right:0;
+    text-align: left;
+}
+
+.swal2-html-container{
+   border-top:3px dotted black;
+   padding:0;
+}
+/* //////////SKILLZ SECTION////////////// */
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.skills-list{
+    
+display:flex;
+justify-content: space-between;
+
+}
+
+.skills-list li {
+    width:calc((100% / 7) - 50px);
+    transition:.4s ease;
+   position:relative;  
+   top:-9999px; 
+}
+
+.js-scroll.scrolled.skills-list li{
+    top:0;
+
+}
+
+
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+    font-size:.8rem;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+.light{
+    position: absolute;
+
+right: -10px;
+
+width: 30%;
+transform: rotate(180deg);
+bottom: 0;
+opacity: .1;
+transition:1s ease-in-out;
+
+}
+
+.light:hover{
+  
+    opacity:1;
+
+}
+
+@media only screen and (max-width:750px){
+
+    .main-menu-display{
+        visibility: hidden;
+    }
+    .burger-menu-button{
+        visibility: visible;
+    }
+
+  
+}
+
+
+</style>
+<body>
+    <header>
+            <!-- Skip link here -->
+        <a href="#main" class="skip-link">Skip to main content.</a>
+        <div class="header-contents-container wrapper">
+            <nav>
+                <ul class="main-menu-display">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>   
+                </ul>
+
+                <!-- Hambuger Icon -->
+                <div class="burger-menu-button">
+                    <div class="o"></div>
+                    <div class="b"></div>
+                    <div class="d"></div>
+                </div>
+
+                <!-- Slide-out Menu -->
+        
+                    <ul class="slide-out-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+             
+            </nav>
+
+            <div class='headings-container'>
+                <h1>I'm Joe Gencarelli</h1>
+                <h2>Front End Developer</h2>
+                <a class="jump-to-work" href="#work">View My Work<span class="fa-solid fa-angles-right"></span></a>
+            </div>
+
+        </div> <!--Wrapper Closing Tag-->
+        <div class="light">
+            <img src='./assets/vintage-bulb.jpg'>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class= "about-me">
+            <div class= "about-me-container wrapper">
+                <div class = "about-me-image">
+                    <!-- Image here -->
+                </div>
+
+                <div clas = "about-me-text">
+                    <h2>About me</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, maiores vitae facilis facere soluta itaque sapiente adipisci sit voluptate praesentium quibusdam, quia illum magnam dignissimos reiciendis laborum enim earum omnis?</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="skills-container wrapper">
+
+                <h2 class="js-scroll">Skills</h2>
+                <ul class= "skills-list js-scroll">
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                      </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                      </span></li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                      </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                      </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                      </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
+                      </li>
+                    <li> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                      </span></li> 
+                </ul>
+
+            </div>
+        </section>
+
+        <section id = "work">
+            <div class="work-container wrapper">
+
+                <h2 class="js-scroll">My Work</h2>
+                <ul class="my-works js-scroll">
+                   
+                  
+                    <li><img src='./assets/square-wow.png'>
+                        <!-- Hidden Div for project description -->
+                        <div class="project-details" id="wow">
+                            <h3>Oh Wow</h3>
+
+                                <!-- DEV ICONS -->
+                                <p>JS | REST API | HTML5 | SASS</p>
+                               <button>Learn More<span class="fa-solid fa-angles-right"></span></button>   
+                        </div>
+                    </li>
+
+                    <li class="js-scroll"><img src='./assets/BarOneDesktop.png'>
+                        <div class="project-details" id="bar-one">
+                        <h3>Bar-One</h3>
+
+                        <!-- DEV ICONS -->
+                        <p>HTML5| SASS | JS</p>
+                       <button>Learn More<span class="fa-solid fa-angles-right"></span></button>
+
+                        </div>
+                    </li>
+
+                    <li><img src='./assets/square-wow.png'>
+                        <!-- Hidden Div for project description -->
+                        <div class="project-details">
+                            <h3>Oh Wow</h3>
+
+                                <!-- DEV ICONS -->
+                                <p>JS | REST API | HTML5 | SASS</p>
+                               <button>Learn More<span class="fa-solid fa-angles-right"></span></button>   
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class= "contact-container wrapper">
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>      
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made by Joe Gencarelli</p>
+    </footer>
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/f5525585de.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet Alert Script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        // Slide out menu
+
+        // Select the burger menu class
+        const burgerMenu=document.querySelector('.burger-menu-button')
+
+        // Decalre a variable to keep track of menu open/close status
+        let clicked=true;
+
+        // Add an event listner to the burger menu class
+        burgerMenu.addEventListener('click', ()=>{
+
+            // Select the individual burger menu divs and the slide out menu
+            const top = document.querySelector('.o');
+            const middle = document.querySelector('.b');
+            const bottom = document.querySelector('.d');
+            const slideOutMenu=document.querySelector('.slide-out-menu')
+           
+            // If true - open slide out menu
+            if(clicked===true){
+    
+                // Turn burger menu to an X 
+                middle.style.opacity="0";
+                top.style.transform="rotate(45deg) translate(5px, 5px)";
+                bottom.style.transform="rotate(-45deg) translate(7px, -7px)";
+               
+                // Bring the slide out menu on screen
+                slideOutMenu.style.right= '0px';
+
+                // Re-assign clicked to false
+                clicked=false;
+            }
+
+            // If false, menu slides out
+            else{
+                // Revert back to burger menu button
+                middle.style.opacity="1";
+                top.style.transform="revert";
+                bottom.style.transform="revert";
+
+                //Bring slide out menu off screen
+                slideOutMenu.style.right= '-9999px';
+
+                // Re-assign clicked to true    
+                clicked=true;
+            }
+        })
+
+        // Variable to represent the height of the screen
+        const scrollOffset = 100;
+        // Select all elements with class of js-scroll - these elements will transition in when scroll event is triggered
+        const scrollElement = document.querySelectorAll(".js-scroll");
+        
+        // Function that checks if the element is in view
+        const elementInView = (el) => {
+            
+            // Find the height between the element and the top of the screen
+            const elementTop = el.getBoundingClientRect().top;
+            
+            // Return true if the element is less than the height between the element and the screen
+            return (elementTop <= window.innerHeight);
+        };
+
+        const displayScrollElement = (item) => {
+            // Attach a class to each element as it comes in view - this class will transition the elements into view
+            item.classList.add('scrolled');
+        }
+        
+        // // Function to handle each event by attaching a new class:scrolled which will transition the elements in
+        // const hideScrollElement = (item) => {
+        //     item.classList.remove('scrolled');
+        // }
+
+        // Function to handle each event:
+        // if the element returns true (its height is less than 100 vh ) call the displayscroll function to add class to transition 
+        const handleScrollAnimation = () => {
+            scrollElement.forEach((element)=>{
+                if (elementInView(element)) {
+                    displayScrollElement(element);
+                } 
+    // else {
+//      hideScrollElement(element);
+//    }
+            })
+        }  
+        // Add event listner onto window, which will call the event handler function 
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        })
+
+        // Select all buttons in the portfolio section
+        const alertButtons=document.querySelectorAll('button');
+
+        // Run a forEach on the button node listner and attach an event listner to each button
+        alertButtons.forEach((button)=>{
+            button.addEventListener("click", (e)=>{
+                
+                // Array containing objects; properties are for each respective portfolio piece
+                const myWorks = [
+                    {
+                        imageUrl: './assets/final-oh-wow-alert.png',
+                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can chose a movie from a dropbdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
+
+                    },
+                    {
+                        imageUrl: './assets/bar-one-alert.png',
+                        html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web. With a little Javascript, some functionality was added to give the user a real experience.</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
+                    }
+                ];
+
+                // Use the id of the parent element of each button to display an alert with the corresponding properties from the objects in the array
+                if(e.target.parentElement.id==="wow"){
+         
+                    Swal.fire({
+                        imageUrl: myWorks[0].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[0].html
+                    }); 
+                }
+
+                else if(e.target.parentElement.id="bar-one"){
+                    Swal.fire({
+                        imageUrl: myWorks[1].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[1].html
+                    }); 
+                }
+
+
+                else{
+                    Swal.fire({
+                        imageUrl: myWorks[0].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[0].html
+                    }); 
+                }
+     
+            })
+        })
+
+    </script>
+</body>
+</html>

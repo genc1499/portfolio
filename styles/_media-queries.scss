@@ -1,0 +1,12 @@
+@media only screen and (max-width:750px){
+// Hide main nav and display burger menu icon
+    nav{
+        .main-menu-display{
+            visibility: hidden;
+        }
+        .burger-menu-button{
+            visibility: visible;
+        }
+    }
+  
+}

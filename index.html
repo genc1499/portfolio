@@ -7,28 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chathura&family=Fredericka+the+Great&family=Open+Sans&family=Roboto:wght@300&family=Tulpen+One&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="./styles/style.css">
-          
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chathura&family=Fredericka+the+Great&family=Open+Sans&family=Roboto:wght@300&family=Tulpen+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles/style.css">      
     <title>Coder Joe's</title>
 </head>
 <style>
  
-    html{
-        font-family: 'Roboto', sans-serif;
-        margin:0;
-        padding:0;
-        overflow-x: hidden;
-       
-    }
-    img{
-        width:100%;
-        display:inline-block;
-        object-fit: cover;
-        border-radius:5px;
-    }
-
     /* headerrrrrrrrrr */
     @keyframes slideInFromLeft {
     0% {
@@ -51,52 +36,15 @@
 
 
 
-    /* nav////////////////////////////////////// */
-    nav{
-        padding-top: 20px;
-    }
-    .main-menu-display{
-        display:flex;
-        justify-content: flex-end;
-        margin-top:20px;
-        margin:0;
-    }
+
 
     .main-menu-display a{
         background-color:initial;
     }
 
-    .slide-out-menu a{
-        color:white;
-        background-color: initial;
-    }
+  
 
-    .burger-menu-button{
-        color:white;
-        visibility: hidden;
-    }
-
-    .slide-out-menu{
-        position: absolute;
-        right: -9999px;
-        top: 44px;
-        height: 25vh;
-        width: 100vw;
-        transition: .3s ease-in;
-        z-index: 100;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        background-color: black;  
-      
-    }
-    /* .slide-out-menu li::after{
-        content:'';
-        display:inline-block;
-        border-bottom:1px white solid;
-        width:100vw;
-    } */
-
+    
 
 
  
@@ -122,29 +70,8 @@
      
     }
  
-    .wrapper{
-        margin:0 auto;
-        width:85%;
-        max-width:1200px;
-    }
-    .burger-menu-button{
-        display:flex;
-        flex-direction:column;
-        height:20px;
-        justify-content: space-between;
-        position:absolute;
-        right:66px;
-        top:20px;
-    }
 
-    .burger-menu-button div{
-        background-color: white;
-        width:20px;
-        height:3px;
-        transition: .3s ease-in;
-        border-radius:10px
 
-    }
 
     span{
         transition: .3s ease-in;
@@ -152,10 +79,6 @@
     
     }
 
-    .jump-to-work:hover span{
-        transform: rotate(90deg);
-     
-    }
 
     /* HIDDEN DIV WITH PROJECTS */
     .project-details{
@@ -243,35 +166,11 @@
      
     }
 
-    header{
-        background-color:black;
-        height:100vh;
-        width:100vw;
-       position: relative;
-    }
-    header a{
-        width:20%;
-        background-color:rgb(139, 9, 9);
-        padding:10px 20px;
-        color:white;
-        border-radius:5px;
-        transition:.3s ease-in;
-    }
+
    
  
-h1{
-    font-size: 4rem;
-    color:white;
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-}
 
-header h2{
-    color:white;
-    font-size:2rem;
-    margin-top:-50px;
-    font-style:italic;
-    animation: 1s ease-out 0s 1 slideInFromRight;
-}
+
 
 .alert-text{
     text-align:left;
@@ -337,52 +236,11 @@ justify-content: space-between;
 
 
 
-.skip-link {
-    position: absolute;
-    left: -1000px;
-    top: 5px;
-    z-index: 999;
-    background: white;
-    color: black;
-    font-size:.8rem;
-}
 
-.skip-link:focus {
-    left: 0;
-}
-
-.light{
-    position: absolute;
-
-right: -10px;
-
-width: 30%;
-transform: rotate(180deg);
-bottom: 0;
-opacity: .1;
-transition:1s ease-in-out;
-
-}
-
-.light:hover{
-  
-    opacity:1;
-
-}
+    
 
 
 
-@media only screen and (max-width:750px){
-
-    .main-menu-display{
-        visibility: hidden;
-    }
-    .burger-menu-button{
-        visibility: visible;
-    }
-
-  
-}
 
 
 </style>
@@ -426,9 +284,11 @@ transition:1s ease-in-out;
             </div>
 
         </div> <!--Wrapper Closing Tag-->
+
         <div class="light js-scroll">
             <img src='./assets/vintage-bulb.png'>
         </div>
+
     </header>
 
     <main id="main">
@@ -452,25 +312,31 @@ transition:1s ease-in-out;
                 <ul class= "skills-list js-scroll">
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                      </li>
+                    </li>
+
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                      </span></li>
+                    </li>
+
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-                      </li>
+                    </li>
+
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                      </li>
+                    </li>
+
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                      </li>
+                    </li>
+
                     <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-                      </li>
+                    </li>
+
                     <li> 
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                      </span></li> 
+                    </li> 
                 </ul>
 
             </div>
@@ -549,6 +415,7 @@ transition:1s ease-in-out;
     <!-- Sweet Alert Script -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- JS file link -->
     <script src="./app.js"></script>
 </body>
 </html>

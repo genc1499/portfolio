@@ -7,3 +7,42 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+// Skip link styling
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+    font-size:.8rem;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    font-size:125%;
+   
+}
+img{
+    width:100%;
+    display:inline-block;
+    object-fit: cover;
+    border-radius:5px;
+}
+
+.wrapper{
+    margin:0 auto;
+    width:85%;
+    max-width:1200px;
+}
+
+

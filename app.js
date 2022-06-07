@@ -1,9 +1,151 @@
-// Pseudo code for match game
-// Add event listeners to each list item
-// Once a card is picked, the card must flip and hsow whats underneath
-// the user picks a second card: only two cards can be picked at a time
-// check if the two chosen cards match
-// if they do, chnage the colour and remove vent listner from both cards
-// if they dont match, flip htem back to original state
-// Have a counter so we know when the game is finished 
-// once the game is finished, reset the cards
+ // Slide out menu
+
+        // Select the burger menu class
+        const burgerMenu=document.querySelector('.burger-menu-button')
+
+        // Decalre a variable to keep track of menu open/close status
+        let clicked=true;
+
+        // Add an event listner to the burger menu class
+        burgerMenu.addEventListener('click', ()=>{
+
+            // Select the individual burger menu divs and the slide out menu
+            const top = document.querySelector('.o');
+            const middle = document.querySelector('.b');
+            const bottom = document.querySelector('.d');
+            const slideOutMenu=document.querySelector('.slide-out-menu')
+           
+            // If true - open slide out menu
+            if(clicked===true){
+    
+                // Turn burger menu to an X 
+                middle.style.opacity="0";
+                top.style.transform="rotate(45deg) translate(5px, 5px)";
+                bottom.style.transform="rotate(-45deg) translate(7px, -7px)";
+               
+                // Bring the slide out menu on screen
+                slideOutMenu.style.right= '0px';
+
+                // Re-assign clicked to false
+                clicked=false;
+            }
+
+            // If false, menu slides out
+            else{
+                // Revert back to burger menu button
+                middle.style.opacity="1";
+                top.style.transform="revert";
+                bottom.style.transform="revert";
+
+                //Bring slide out menu off screen
+                slideOutMenu.style.right= '-9999px';
+
+                // Re-assign clicked to true    
+                clicked=true;
+            }
+        })
+
+        // Variable to represent the height of the screen
+        const scrollOffset = 100;
+        // Select all elements with class of js-scroll - these elements will transition in when scroll event is triggered
+        const scrollElement = document.querySelectorAll(".js-scroll");
+        
+        // Function that checks if the element is in view
+        const elementInView = (el) => {
+            
+            // Find the height between the element and the top of the screen
+            const elementTop = el.getBoundingClientRect().top;
+            
+            // Return true if the element is less than the height between the element and the screen
+            return (elementTop < window.innerHeight);
+        };
+
+        const displayScrollElement = (item) => {
+            // Attach a class to each element as it comes in view - this class will transition the elements into view
+            item.classList.add('scrolled');
+        }
+        
+        // // Function to handle each event by attaching a new class:scrolled which will transition the elements in
+        // const hideScrollElement = (item) => {
+        //     item.classList.remove('scrolled');
+        // }
+
+        // Function to handle each event:
+        // if the element returns true (its height is less than 100 vh ) call the displayscroll function to add class to transition 
+        const handleScrollAnimation = () => {
+            scrollElement.forEach((element)=>{
+                if (elementInView(element)) {
+                    displayScrollElement(element);
+                } 
+    // else {
+//      hideScrollElement(element);
+//    }
+            })
+        }  
+        // Add event listner onto window, which will call the event handler function 
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        })
+
+        // Select all buttons in the portfolio section
+        const alertButtons=document.querySelectorAll('button');
+
+        // Run a forEach on the button node listner and attach an event listner to each button
+        alertButtons.forEach((button)=>{
+            button.addEventListener("click", (e)=>{
+                
+                // Array containing objects; properties are for each respective portfolio piece
+                const myWorks = [
+                    {
+                        imageUrl: './assets/final-oh-wow-alert.png',
+                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can chose a movie from a dropbdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
+
+                    },
+                    {
+                        imageUrl: './assets/bar-one-alert.png',
+                        html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web. With a little Javascript, some functionality was added to give the user a real experience.</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
+                    }
+                ];
+
+                // Use the id of the parent element of each button to display an alert with the corresponding properties from the objects in the array
+                if(e.target.parentElement.id==="wow"){
+         
+                    Swal.fire({
+                        imageUrl: myWorks[0].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[0].html
+                    }); 
+                }
+
+                else if(e.target.parentElement.id==="bar-one"){
+                    Swal.fire({
+                        imageUrl: myWorks[1].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[1].html
+                    }); 
+                }
+
+
+                else{
+                    Swal.fire({
+                        imageUrl: myWorks[0].imageUrl,
+                        imageWidth:'400',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[0].html
+                    }); 
+                }
+     
+            })
+        })

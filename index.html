@@ -9,19 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chathura&family=Fredericka+the+Great&family=Open+Sans&family=Roboto:wght@300&family=Tulpen+One&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="./styles/style.css">
           
     <title>Coder Joe's</title>
 </head>
 <style>
-    html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
-    
-    .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
-    
-    html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
-    
-    *, *:before, *:after {box-sizing: inherit}
-    
-    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+ 
     html{
         font-family: 'Roboto', sans-serif;
         margin:0;
@@ -35,6 +28,26 @@
         object-fit: cover;
         border-radius:5px;
     }
+
+    /* headerrrrrrrrrr */
+    @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight{
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 
 
@@ -232,7 +245,7 @@
 
     header{
         background-color:black;
-        height:80vh;
+        height:100vh;
         width:100vw;
        position: relative;
     }
@@ -249,6 +262,7 @@
 h1{
     font-size: 4rem;
     color:white;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 header h2{
@@ -256,6 +270,7 @@ header h2{
     font-size:2rem;
     margin-top:-50px;
     font-style:italic;
+    animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .alert-text{
@@ -272,13 +287,16 @@ h2.js-scroll {
     transition:.4s ease-in-out;
 }
 
+
 .js-scroll.my-works li{
-    transition:.4s ease-in-out;
+    /* transition:.4s ease-in-out; */
     width:0; 
+    animation: 5s ease-out slideInFromLeft;
 }
 
 .js-scroll.scrolled.my-works li{
     width:33%;
+ 
 }
 
 
@@ -305,11 +323,11 @@ justify-content: space-between;
 
 }
 
-.skills-list li {
+.skills-list li{
     width:calc((100% / 7) - 50px);
     transition:.4s ease;
    position:relative;  
-   top:-9999px; 
+   top:-9999px;
 }
 
 .js-scroll.scrolled.skills-list li{
@@ -351,6 +369,8 @@ transition:1s ease-in-out;
     opacity:1;
 
 }
+
+
 
 @media only screen and (max-width:750px){
 
@@ -406,8 +426,8 @@ transition:1s ease-in-out;
             </div>
 
         </div> <!--Wrapper Closing Tag-->
-        <div class="light">
-            <img src='./assets/vintage-bulb.jpg'>
+        <div class="light js-scroll">
+            <img src='./assets/vintage-bulb.png'>
         </div>
     </header>
 
@@ -463,7 +483,7 @@ transition:1s ease-in-out;
                 <ul class="my-works js-scroll">
                    
                   
-                    <li><img src='./assets/square-wow.png'>
+                    <li class="first-item"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details" id="wow">
                             <h3>Oh Wow</h3>
@@ -474,7 +494,7 @@ transition:1s ease-in-out;
                         </div>
                     </li>
 
-                    <li class="js-scroll"><img src='./assets/BarOneDesktop.png'>
+                    <li class="second-item"><img src='./assets/BarOneDesktop.png'>
                         <div class="project-details" id="bar-one">
                         <h3>Bar-One</h3>
 
@@ -485,7 +505,7 @@ transition:1s ease-in-out;
                         </div>
                     </li>
 
-                    <li><img src='./assets/square-wow.png'>
+                    <li class ="last-item"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details">
                             <h3>Oh Wow</h3>
@@ -529,160 +549,6 @@ transition:1s ease-in-out;
     <!-- Sweet Alert Script -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
-
-        // Slide out menu
-
-        // Select the burger menu class
-        const burgerMenu=document.querySelector('.burger-menu-button')
-
-        // Decalre a variable to keep track of menu open/close status
-        let clicked=true;
-
-        // Add an event listner to the burger menu class
-        burgerMenu.addEventListener('click', ()=>{
-
-            // Select the individual burger menu divs and the slide out menu
-            const top = document.querySelector('.o');
-            const middle = document.querySelector('.b');
-            const bottom = document.querySelector('.d');
-            const slideOutMenu=document.querySelector('.slide-out-menu')
-           
-            // If true - open slide out menu
-            if(clicked===true){
-    
-                // Turn burger menu to an X 
-                middle.style.opacity="0";
-                top.style.transform="rotate(45deg) translate(5px, 5px)";
-                bottom.style.transform="rotate(-45deg) translate(7px, -7px)";
-               
-                // Bring the slide out menu on screen
-                slideOutMenu.style.right= '0px';
-
-                // Re-assign clicked to false
-                clicked=false;
-            }
-
-            // If false, menu slides out
-            else{
-                // Revert back to burger menu button
-                middle.style.opacity="1";
-                top.style.transform="revert";
-                bottom.style.transform="revert";
-
-                //Bring slide out menu off screen
-                slideOutMenu.style.right= '-9999px';
-
-                // Re-assign clicked to true    
-                clicked=true;
-            }
-        })
-
-        // Variable to represent the height of the screen
-        const scrollOffset = 100;
-        // Select all elements with class of js-scroll - these elements will transition in when scroll event is triggered
-        const scrollElement = document.querySelectorAll(".js-scroll");
-        
-        // Function that checks if the element is in view
-        const elementInView = (el) => {
-            
-            // Find the height between the element and the top of the screen
-            const elementTop = el.getBoundingClientRect().top;
-            
-            // Return true if the element is less than the height between the element and the screen
-            return (elementTop <= window.innerHeight);
-        };
-
-        const displayScrollElement = (item) => {
-            // Attach a class to each element as it comes in view - this class will transition the elements into view
-            item.classList.add('scrolled');
-        }
-        
-        // // Function to handle each event by attaching a new class:scrolled which will transition the elements in
-        // const hideScrollElement = (item) => {
-        //     item.classList.remove('scrolled');
-        // }
-
-        // Function to handle each event:
-        // if the element returns true (its height is less than 100 vh ) call the displayscroll function to add class to transition 
-        const handleScrollAnimation = () => {
-            scrollElement.forEach((element)=>{
-                if (elementInView(element)) {
-                    displayScrollElement(element);
-                } 
-    // else {
-//      hideScrollElement(element);
-//    }
-            })
-        }  
-        // Add event listner onto window, which will call the event handler function 
-        window.addEventListener('scroll', () => {
-            handleScrollAnimation();
-        })
-
-        // Select all buttons in the portfolio section
-        const alertButtons=document.querySelectorAll('button');
-
-        // Run a forEach on the button node listner and attach an event listner to each button
-        alertButtons.forEach((button)=>{
-            button.addEventListener("click", (e)=>{
-                
-                // Array containing objects; properties are for each respective portfolio piece
-                const myWorks = [
-                    {
-                        imageUrl: './assets/final-oh-wow-alert.png',
-                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can chose a movie from a dropbdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
-                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
-                        '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
-
-                    },
-                    {
-                        imageUrl: './assets/bar-one-alert.png',
-                        html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web. With a little Javascript, some functionality was added to give the user a real experience.</p><br>`+
-                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
-                        '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
-                    }
-                ];
-
-                // Use the id of the parent element of each button to display an alert with the corresponding properties from the objects in the array
-                if(e.target.parentElement.id==="wow"){
-         
-                    Swal.fire({
-                        imageUrl: myWorks[0].imageUrl,
-                        imageWidth:'400',
-                        showCloseButton: true,
-                        showCancelButton: false,
-                        showConfirmButton: false,
-                        html:myWorks[0].html
-                    }); 
-                }
-
-                else if(e.target.parentElement.id="bar-one"){
-                    Swal.fire({
-                        imageUrl: myWorks[1].imageUrl,
-                        imageWidth:'400',
-                        showCloseButton: true,
-                        showCancelButton: false,
-                        showConfirmButton: false,
-                        html:myWorks[1].html
-                    }); 
-                }
-
-
-                else{
-                    Swal.fire({
-                        imageUrl: myWorks[0].imageUrl,
-                        imageWidth:'400',
-                        showCloseButton: true,
-                        showCancelButton: false,
-                        showConfirmButton: false,
-                        html:myWorks[0].html
-                    }); 
-                }
-     
-            })
-        })
-
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>

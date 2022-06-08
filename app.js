@@ -1,5 +1,15 @@
  // Slide out menu
 
+
+
+        setTimeout(()=>{
+            const line1 = document.querySelector('.line1');
+            const line2 = document.querySelector('.line2');
+            line1.style.visibility="hidden";
+            line2.style.visibility="hidden";
+
+        },1100);
+
         // Select the burger menu class
         const burgerMenu=document.querySelector('.burger-menu-button')
 

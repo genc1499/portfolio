@@ -12,243 +12,18 @@
     <link rel="stylesheet" href="./styles/style.css">      
     <title>Coder Joe's</title>
 </head>
-<style>
- 
-    /* headerrrrrrrrrr */
-    @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
-@keyframes slideInFromRight{
-    0% {
-        transform: translateX(200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-
-
-
-
-    .main-menu-display a{
-        background-color:initial;
-    }
-
-  
-
-    
-
-
- 
-
-
-
-    /* //////////////////////////////////////////////// */
-    /* flex ul for portfolio */
-    .my-works{
-        display:flex;
-        list-style:none;
-        padding:0;
-        margin:0;
-        flex-wrap:wrap;
-        justify-content: space-between;
-        
-    }
-
-    .my-works li{
-       
-        display:flex;
-        position:relative;
-     
-    }
- 
-
-
-
-    span{
-        transition: .3s ease-in;
-        display:inline-block;
-    
-    }
-
-
-    /* HIDDEN DIV WITH PROJECTS */
-    .project-details{
-        height:0;
-        width:100%;
-        top:0;
-        opacity:0;
-       position:absolute;
-        transition: .4s ease-out; 
-        background-color:grey;
-        border-radius:5px;  
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        
-    }
-    .project-details h3{
-        margin-top:0;
-        font-weight:600;
-    }
-    .project-details>*{
-        text-align: center;
-        margin-bottom:3px;
-    }
-
- 
-    .project-details button{
-        background-color: red;
-        color:white;
-        padding:3px 6px;
-        width:50%;
-        margin:0 auto;
-        border:none;
-        border-radius:5px;
-        transition: .3s ease-in-out;
-    }
-    .fa-solid, .fa-angles-right{
-       margin-left:5px;
-   }
-
-    /* Hover on learn more button */
-    .project-details button:hover,  .project-details button:focus{
-        width:51%;
-        box-shadow: -7px 13px 18px -4px #000000;
-      
-    }
-    .project-details button:hover span,  .project-details button:focus span{
-        transform: rotate(-90deg);
-    }
-
-
-
-    .my-works li:hover .project-details{
- 
- height:100%;
- opacity:.9;
- 
-}
-
-/* ////////////////////////////////////////////////// */
-    
-/* SWEET ALERT STYLES////////////////////// */
-    a{
-        text-decoration:none;
-       
-
-    }
-
-    .live-link{
-        background-color: red;
-        color:white;
-        padding:2px 3px;
-        border-radius:5px;
-        margin-left:3%;
-        font-size:.8rem;
-        
-        
-    }
-
-    .link-container{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-       
-     
-    }
-
-
-   
- 
-
-
-
-.alert-text{
-    text-align:left;
-    margin-bottom:-10px;
-    font-size:.8 rem;
-    z-index:100;
-
-}
-
-h2.js-scroll {
-    position:relative;
-        right:-999px;
-    transition:.4s ease-in-out;
-}
-
-
-.js-scroll.my-works li{
-    /* transition:.4s ease-in-out; */
-    width:0; 
-    animation: 5s ease-out slideInFromLeft;
-}
-
-.js-scroll.scrolled.my-works li{
-    width:33%;
- 
-}
-
-
-h2.js-scroll.scrolled{
-    width:100%;
-    right:0;
-    text-align: left;
-}
-
-.swal2-html-container{
-   border-top:3px dotted black;
-   padding:0;
-}
-/* //////////SKILLZ SECTION////////////// */
-ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-.skills-list{
-    
-display:flex;
-justify-content: space-between;
-
-}
-
-.skills-list li{
-    width:calc((100% / 7) - 50px);
-    transition:.4s ease;
-   position:relative;  
-   top:-9999px;
-}
-
-.js-scroll.scrolled.skills-list li{
-    top:0;
-
-}
-
-
-
-
-    
-
-
-
-
-
-</style>
 <body>
     <header>
             <!-- Skip link here -->
         <a href="#main" class="skip-link">Skip to main content.</a>
         <div class="header-contents-container wrapper">
+
+         
+            <div class="line1"><p>J</p></div>
+            <div class="line2"><p>G</p></div>
+ 
+          
             <nav>
                 <ul class="main-menu-display">
                     <li><a href="#">Home</a></li>
@@ -294,13 +69,24 @@ justify-content: space-between;
     <main id="main">
         <section class= "about-me">
             <div class= "about-me-container wrapper">
-                <div class = "about-me-image">
-                    <!-- Image here -->
-                </div>
 
-                <div clas = "about-me-text">
-                    <h2>About me</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, maiores vitae facilis facere soluta itaque sapiente adipisci sit voluptate praesentium quibusdam, quia illum magnam dignissimos reiciendis laborum enim earum omnis?</p>
+              
+                <h2>About me</h2>
+                <div class = "about-me-text">
+                   
+                    <div class="image-container">
+                        <img src= "./assets/vintage-bulb.jpg" alt="Image of Joe Gencarelli">
+                        
+                    </div>
+
+                  
+
+                    <div class="text-container">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, maiores vitae facilis facere soluta itaque sapiente adipisci sit voluptate praesentium quibusdam, quia illum magnam dignissimos reiciendis laborum enim earum omnis?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, maiores vitae facilis facere soluta itaque sapiente adipisci sit voluptate praesentium quibusdam, quia illum magnam dignissimos reiciendis laborum enim earum omnis?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, maiores vitae facilis facere soluta itaque sapiente adipisci sit voluptate praesentium quibusdam, quia illum magnam dignissimos reiciendis laborum enim earum omnis?</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -388,6 +174,11 @@ justify-content: space-between;
 
         <section id="contact">
             <div class= "contact-container wrapper">
+                <h2>Contact</h2>
+
+                <div class="contact-text">
+                    <p>Have any questions? Want to say hi - need a recipe idea? Send me a message and I'll gladly get back to you - thanks!</p>
+                </div>
 
                 <form>
                     <label for="name">Name</label>

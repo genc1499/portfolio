@@ -253,11 +253,17 @@ html {
 }
 
 img {
-  width: 100%;
   display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -280,27 +286,72 @@ header {
   width: 100vw;
   position: relative;
 }
-header a {
-  width: 20%;
-  background-color: rgb(139, 9, 9);
-  padding: 10px 20px;
+header .line1, header .line2 {
+  width: 50vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  position: absolute;
+}
+header .line1 p, header .line2 p {
+  font-size: 5rem;
   color: white;
-  border-radius: 5px;
-  transition: 0.3s ease-in;
+}
+header .line1 {
+  left: 0;
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  border-right: white dotted 2px;
+}
+header .line1 p {
+  text-align: right;
+}
+header .line2 {
+  right: 0;
+  -webkit-animation-name: slideOutRight;
+          animation-name: slideOutRight;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  border-left: white dotted 2px;
 }
 header h1 {
   color: white;
-  -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
-          animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 header h2 {
   color: white;
   margin-top: -50px;
   font-style: italic;
-  -webkit-animation: 1s ease-out 0s 1 slideInFromRight;
-          animation: 1s ease-out 0s 1 slideInFromRight;
+  -webkit-animation: 1.5s ease-out slideInFromRight;
+          animation: 1.5s ease-out slideInFromRight;
 }
-header .jump-to-work:hover span {
+header .jump-to-work {
+  display: inline-block;
+  width: 194px;
+  background-color: rgb(139, 9, 9);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s 1 ease-in;
+  text-align: center;
+}
+header .jump-to-work:hover, header .jump-to-work:focus {
+  width: 198px;
+  box-shadow: 0px 10px 20px -9px white;
+}
+header .jump-to-work span {
+  display: inline-block;
+}
+header .jump-to-work:hover span, header .jump-to-work:focus span {
   transform: rotate(90deg);
 }
 header .light {
@@ -324,6 +375,7 @@ nav .main-menu-display {
   justify-content: flex-end;
   margin-top: 20px;
   margin: 0;
+  transition: 0.1s ease-out;
 }
 nav .slide-out-menu {
   position: absolute;
@@ -331,7 +383,7 @@ nav .slide-out-menu {
   top: 44px;
   height: 25vh;
   width: 100vw;
-  transition: 0.3s ease-in;
+  transition: 1s ease-in;
   z-index: 100;
   align-items: center;
   display: flex;
@@ -361,9 +413,263 @@ nav .burger-menu-button div {
   border-radius: 10px;
 }
 
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInFromTop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.about-me-text {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me-text .image-container {
+  width: 40%;
+  position: relative;
+}
+.about-me-text img {
+  width: 100%;
+  border-radius: 5px;
+}
+.about-me-text .image-box {
+  border: 3px solid black;
+  width: 40%;
+  border-radius: 5px;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+.about-me-text .text-container {
+  width: 50%;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  width: calc(14.2857142857% - 50px);
+  transition: 0.4s ease;
+  position: relative;
+  top: -9999px;
+}
+
+.js-scroll.scrolled.skills-list li {
+  top: 0;
+}
+
+.my-works {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.my-works li {
+  display: flex;
+  position: relative;
+}
+.my-works li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+}
+
+span {
+  transition: 0.3s ease-in;
+  display: inline-block;
+}
+
+/* HIDDEN DIV WITH PROJECTS - styles for each element in the hidden DIV to follow */
+.project-details {
+  height: 0;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  transition: 0.4s ease-out;
+  background-color: grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-details h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.project-details > * {
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.project-details button {
+  background-color: red;
+  color: white;
+  padding: 3px 6px;
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.fa-solid, .fa-angles-right {
+  margin-left: 5px;
+}
+
+.my-works li:hover .project-details, .my-works li:focus .project-details {
+  height: 100%;
+  opacity: 0.9;
+}
+
+/* Hover and focus on learn more button */
+.project-details button:hover, .project-details button:focus {
+  width: 51%;
+  box-shadow: -7px 13px 18px -4px #000000;
+}
+
+.project-details button:hover span, .project-details button:focus span {
+  transform: rotate(-90deg);
+}
+
+/* SWEET ALERT STYLES for each window "pop-up////////////////////// */
+.alert-text {
+  text-align: left;
+  margin-bottom: -10px;
+  font-size: 0.8 rem;
+  z-index: 100;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-link {
+  background-color: red;
+  color: white;
+  padding: 2px 3px;
+  border-radius: 5px;
+  margin-left: 3%;
+  font-size: 0.8rem;
+}
+
+.swal2-html-container {
+  border-top: 3px dotted black;
+  padding: 0;
+}
+
+h2.js-scroll {
+  position: relative;
+  right: -999px;
+  transition: 0.8s ease-in-out;
+}
+
+.js-scroll.my-works li {
+  /* transition:.4s ease-in-out; */
+  width: 0;
+  -webkit-animation: 5s ease-out slideInFromLeft;
+          animation: 5s ease-out slideInFromLeft;
+}
+
+.js-scroll.scrolled.my-works li {
+  width: 33%;
+}
+
+h2.js-scroll.scrolled {
+  width: 100%;
+  right: 0;
+  text-align: left;
+}
+
 @media only screen and (max-width: 750px) {
   nav .main-menu-display {
-    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   nav .burger-menu-button {
     visibility: visible;

@@ -2,7 +2,9 @@
 // Hide main nav and display burger menu icon
     nav{
         .main-menu-display{
-            visibility: hidden;
+            width:0;
+            height:0;
+            overflow:hidden;
         }
         .burger-menu-button{
             visibility: visible;

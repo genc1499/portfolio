@@ -1,0 +1,205 @@
+// ABOUT ME SECTION
+.about-me-text{
+    display:flex;
+    justify-content: space-between;
+
+    .image-container{
+        width:40%;
+        position:relative;
+    }
+        img{
+            width:100%;
+            border-radius:5px;
+        }
+    .image-box{
+        border:3px solid black;
+        width:40%;
+        border-radius:5px;
+        position:absolute;
+        right:3px;
+        top:10px;
+    }
+    .text-container{
+        width:50%;
+    }
+}
+
+
+
+// My SKILLS SECTION
+
+// Flex skills list
+.skills-list{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+    
+// List item styles
+.skills-list li{
+    width:calc((100% / 7) - 50px);
+    transition:.4s ease;
+    position:relative;  
+    top:-9999px;
+    }
+  
+// Once list is in view, add scrolled class styles
+.js-scroll.scrolled.skills-list li{
+    top:0;
+}
+
+// MY WORK SECTION
+
+// Flex UL with portfolio work
+.my-works{
+    display:flex;
+    padding:0;
+    margin:0;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+}
+
+// General styles fior each list item
+.my-works li{
+    display:flex;
+    position:relative;
+    img{
+        object-fit: cover;
+        border-radius:5px;
+        width:100%;
+    }
+}
+
+
+span{
+    transition: .3s ease-in;
+    display:inline-block;
+}
+
+
+
+
+
+
+/* HIDDEN DIV WITH PROJECTS - styles for each element in the hidden DIV to follow */
+.project-details{
+    height:0;
+    width:100%;
+    top:0;
+    opacity:0;
+    position:absolute;
+    transition: .4s ease-out; 
+    background-color:grey;
+    border-radius:5px;  
+    display:flex;
+    flex-direction:column;
+    justify-content: center;    
+    }
+
+    .project-details h3{
+        margin-top:0;
+        font-weight:600;
+    }
+
+    .project-details>*{
+        text-align: center;
+        margin-bottom:3px;
+    }
+
+ 
+    .project-details button{
+        background-color: red;
+        color:white;
+        padding:3px 6px;
+        width:50%;
+        margin:0 auto;
+        border:none;
+        border-radius:5px;
+        transition: .3s ease-in-out;
+    }
+
+    .fa-solid, .fa-angles-right{
+        margin-left:5px;
+   }
+
+// Hover and focus to transition/dispay hidden DIV on each proejct image
+.my-works li:hover .project-details, .my-works li:focus .project-details{
+    height:100%;
+    opacity:.9;  
+}
+
+    /* Hover and focus on learn more button */
+    .project-details button:hover,  .project-details button:focus{
+        width:51%;
+        box-shadow: -7px 13px 18px -4px #000000;  
+    }
+
+    // SPAN transition on button hover and focus
+    .project-details button:hover span,  .project-details button:focus span{
+        transform: rotate(-90deg);
+    }
+
+    /* SWEET ALERT STYLES for each window "pop-up////////////////////// */
+
+    .alert-text{
+        text-align:left;
+        margin-bottom:-10px;
+        font-size:.8 rem;
+        z-index:100;
+
+    }
+
+    // Container holding GIT and LIVE links
+    .link-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+    // Style l;ive link button
+    .live-link{
+        background-color: red;
+        color:white;
+        padding:2px 3px;
+        border-radius:5px;
+        margin-left:3%;
+        font-size:.8rem;     
+    }
+
+   
+    // Add dotted line for each pop-uop window
+    .swal2-html-container{
+        border-top:3px dotted black;
+        padding:0;
+    }   
+
+    // Transition effects for scrolled classes that use JS
+
+    h2.js-scroll {
+        position:relative;
+            right:-999px;
+        transition:.8s ease-in-out;
+    }
+    
+    
+    .js-scroll.my-works li{
+        /* transition:.4s ease-in-out; */
+        width:0; 
+        animation: 5s ease-out slideInFromLeft;
+    }
+    
+    .js-scroll.scrolled.my-works li{
+        width:33%;
+    }
+    
+    
+    h2.js-scroll.scrolled{
+        width:100%;
+        right:0;
+        text-align: left;
+    }
+
+
+
+// CONTACT SECTION

@@ -1,14 +1,18 @@
- // Slide out menu
 
 
 
+// Function to remove "curtains" and display h2 'front end developer'
         setTimeout(()=>{
             const line1 = document.querySelector('.line1');
             const line2 = document.querySelector('.line2');
+            const slideInHeading=document.querySelector('header h2');
             line1.style.visibility="hidden";
             line2.style.visibility="hidden";
+            slideInHeading.style.left="0";
 
-        },1100);
+        },1000);
+
+         // Slide out menu
 
         // Select the burger menu class
         const burgerMenu=document.querySelector('.burger-menu-button')
@@ -34,7 +38,8 @@
                 bottom.style.transform="rotate(-45deg) translate(7px, -7px)";
                
                 // Bring the slide out menu on screen
-                slideOutMenu.style.right= '0px';
+                slideOutMenu.style.height= '25vh';
+                slideOutMenu.style.top= '1px';
 
                 // Re-assign clicked to false
                 clicked=false;
@@ -48,8 +53,8 @@
                 bottom.style.transform="revert";
 
                 //Bring slide out menu off screen
-                slideOutMenu.style.right= '-9999px';
-
+                slideOutMenu.style.height= '0';
+                slideOutMenu.style.top= '-50px';
                 // Re-assign clicked to true    
                 clicked=true;
             }

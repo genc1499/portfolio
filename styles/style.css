@@ -281,7 +281,7 @@ h2 {
 }
 
 header {
-  background-color: black;
+  background-color: rgba(12, 11, 11, 0.95);
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -292,6 +292,8 @@ header .line1, header .line2 {
   z-index: 100;
   background-color: black;
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
 }
 header .line1 p, header .line2 p {
   font-size: 5rem;
@@ -308,6 +310,8 @@ header .line1 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
   border-right: white dotted 2px;
+  justify-content: flex-end;
+  align-items: center;
 }
 header .line1 p {
   text-align: right;
@@ -323,6 +327,8 @@ header .line2 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
   border-left: white dotted 2px;
+  justify-content: flex-start;
+  align-items: center;
 }
 header h1 {
   color: white;
@@ -330,9 +336,10 @@ header h1 {
 header h2 {
   color: white;
   margin-top: -50px;
+  position: relative;
+  left: -999px;
   font-style: italic;
-  -webkit-animation: 1.5s ease-out slideInFromRight;
-          animation: 1.5s ease-out slideInFromRight;
+  transition: 0.5s ease-in;
 }
 header .jump-to-work {
   display: inline-block;
@@ -354,15 +361,6 @@ header .jump-to-work span {
 header .jump-to-work:hover span, header .jump-to-work:focus span {
   transform: rotate(90deg);
 }
-header .light {
-  position: absolute;
-  right: -10px;
-  width: 30%;
-  transform: rotate(180deg);
-  bottom: 0;
-  opacity: 0.1;
-  transition: 1s ease-in-out;
-}
 header .light:hover, header .light:focus {
   opacity: 1;
 }
@@ -377,18 +375,28 @@ nav .main-menu-display {
   margin: 0;
   transition: 0.1s ease-out;
 }
+nav .main-menu-display a {
+  color: white;
+  padding: 0 15px;
+  transition: 0.3s ease;
+}
+nav .main-menu-display a:hover {
+  color: rgb(139, 9, 9);
+}
 nav .slide-out-menu {
   position: absolute;
-  right: -9999px;
-  top: 44px;
-  height: 25vh;
+  right: 0;
+  top: -50px;
   width: 100vw;
-  transition: 1s ease-in;
-  z-index: 100;
+  height: 0;
+  transition: 0.4s ease-in;
   align-items: center;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  background-color: black;
+  background-color: rgba(12, 11, 11, 0.99);
+  overflow: hidden;
+  padding: 15px 0;
 }
 nav .slide-out-menu a {
   color: white;
@@ -404,6 +412,7 @@ nav .burger-menu-button {
   top: 20px;
   color: white;
   visibility: hidden;
+  z-index: 10;
 }
 nav .burger-menu-button div {
   background-color: white;
@@ -413,23 +422,6 @@ nav .burger-menu-button div {
   border-radius: 10px;
 }
 
-@-webkit-keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @-webkit-keyframes slideInFromRight {
   0% {
     transform: translateX(200%);
@@ -438,6 +430,7 @@ nav .burger-menu-button div {
     transform: translateX(0);
   }
 }
+
 @keyframes slideInFromRight {
   0% {
     transform: translateX(200%);
@@ -499,7 +492,7 @@ nav .burger-menu-button div {
   justify-content: space-between;
 }
 .about-me-text .image-container {
-  width: 40%;
+  width: 35%;
   position: relative;
 }
 .about-me-text img {
@@ -516,6 +509,14 @@ nav .burger-menu-button div {
 }
 .about-me-text .text-container {
   width: 50%;
+}
+
+.skills {
+  background-color: #ebebeb;
+  padding: 50px 0;
+}
+.skills h2 {
+  margin-top: 0;
 }
 
 .skills-list {

@@ -1,6 +1,6 @@
 // Back-ground Image
 header{
-    background-color:black;
+    background-color:rgba(12, 11, 11, 0.95);
     height:100vh;
     width:100vw;
     position: relative;
@@ -12,6 +12,8 @@ header{
        z-index:100;
        background-color:black;
        position:absolute;  
+       display:flex;
+       justify-content: flex-end;
        p{
            font-size:5rem;
            color:white;
@@ -24,6 +26,8 @@ header{
        animation-timing-function: ease-out;
        animation-delay: .8s;
        border-right:white dotted 2px;
+       justify-content: flex-end;
+       align-items: center;
        p{
            text-align:right;
        }
@@ -36,6 +40,8 @@ header{
        animation-timing-function: ease-out;
        animation-delay: .8s;
        border-left:white dotted 2px;
+       justify-content: flex-start;
+       align-items: center;
    }
     h1{
         color:white;
@@ -44,8 +50,10 @@ header{
     h2{
         color:white;
         margin-top:-50px;
+        position:relative;
+        left:-999px;
         font-style:italic;
-        animation: 1.5s ease-out slideInFromRight;
+        transition:.5s ease-in;   
     }
 
     .jump-to-work{
@@ -72,16 +80,16 @@ header{
         transform: rotate(90deg);
     }
     
-    .light{
-        position: absolute;
-        right: -10px;
-        width: 30%;
-        transform: rotate(180deg);
-        bottom: 0;
-        opacity: .1;
-        transition:1s ease-in-out;
+    // .light{
+    //     position: absolute;
+    //     right: -10px;
+    //     width: 30%;
+    //     transform: rotate(180deg);
+    //     bottom: 0;
+    //     opacity: .1;
+    //     transition:1s ease-in-out;
         
-    }
+    // }
     
     .light:hover,  .light:focus{
         opacity:1;
@@ -101,22 +109,36 @@ nav{
         margin-top:20px;
         margin:0;
         transition:.1s ease-out;
+        a{
+            color:white;
+            padding:0 15px;
+            transition:.3s ease;
+          
+        }
+
+
+        a:hover{
+            color:rgb(139, 9, 9);
+        }
+
+      
     }
 
     // Slide out menu styles
     .slide-out-menu{
         position: absolute;
-        right: -9999px;
-        top: 44px;
-        height: 25vh;
-        width: 100vw;
-        transition: 1s ease-in;
-        z-index: 100;
+        right:0;
+        top: -50px;
+        width:100vw;
+        height:0;
+        transition: .4s ease-in;
         align-items: center;
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
-        background-color: black;
-        
+        background-color: rgba(12, 11, 11, 0.99);
+        overflow: hidden;
+        padding:15px 0;
         a{
             color:white;
             background-color: initial;
@@ -134,6 +156,7 @@ nav{
         top:20px;
         color:white;
         visibility: hidden;
+        z-index:10;
 
         div{
             background-color: white;
@@ -148,14 +171,7 @@ nav{
 
 // HEADER KEYFRAMES
 
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 
 @keyframes slideInFromRight{
     0% {

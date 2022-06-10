@@ -26,15 +26,12 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-right:white dotted 2px;
+       border-right:white solid 2px;
        justify-content: flex-end;
        align-items: center;
        p{
            text-align:right;
-           border-left:1px dotted white;
-           border-top:1px dotted white;
-           border-bottom:1px dotted white;
-           border-radius: 25%;
+         
        }
     }
 
@@ -44,7 +41,7 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-left:white dotted 2px;
+       border-left:white solid 2px;
        justify-content: flex-start;
        align-items: center;
    }

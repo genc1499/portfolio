@@ -61,7 +61,7 @@
         })
 
         // Variable to represent the height of the screen
-        const scrollOffset = 100;
+        // const scrollOffset = 100;
         // Select all elements with class of js-scroll - these elements will transition in when scroll event is triggered
         const scrollElement = document.querySelectorAll(".js-scroll");
         

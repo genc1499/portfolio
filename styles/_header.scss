@@ -6,6 +6,10 @@ header{
     position: relative;
     display:flex;
     flex-direction: column;
+    .header-contents-container{
+        display:flex;
+        flex-direction:column;
+    }
     
    .line1,.line2{
        width:50vw;
@@ -26,14 +30,11 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-right:white dotted 2px;
+       border-right:white solid 2px;
        justify-content: flex-end;
        align-items: center;
        p{
            text-align:right;
-           border-left:1px dotted white;
-           border-top:1px dotted white;
-           border-bottom:1px dotted white;
            border-radius: 25%;
        }
     }
@@ -44,20 +45,22 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-left:white dotted 2px;
+       border-left:white solid 2px;
        justify-content: flex-start;
        align-items: center;
    }
 
    .headings-container{
        align-self: center;
+       text-align: center;
+        margin-top: 15%;
    }
     h1{
         color:white;
         // animation: 3s ease-out 0s 1 slideInFromLeft;
     }
     h2{
-        color:white;
+        color:rgba(20, 98, 129);
         margin-top:-50px;
         position:relative;
         left:-999px;
@@ -68,7 +71,8 @@ header{
     .jump-to-work{
         display:inline-block;
         width:194px;
-        background-color:rgb(139, 9, 9);
+        background-color:transparent;
+        border:2px white solid;
         padding:10px 20px;
         color:white;
         border-radius:5px;
@@ -79,6 +83,7 @@ header{
     .jump-to-work:hover, .jump-to-work:focus{
         width:198px;
         box-shadow: 0px 10px 20px -9px black;
+        background-color:rgb(139, 9, 9);
     }
     .jump-to-work span{
       
@@ -88,22 +93,6 @@ header{
     .jump-to-work:hover span, .jump-to-work:focus span{
         transform: rotate(90deg);
     }
-    
-    // .light{
-    //     position: absolute;
-    //     right: -10px;
-    //     width: 30%;
-    //     transform: rotate(180deg);
-    //     bottom: 0;
-    //     opacity: .1;
-    //     transition:1s ease-in-out;
-        
-    // }
-    
-    .light:hover,  .light:focus{
-        opacity:1;
-    }
-    
      
 }
 
@@ -121,8 +110,10 @@ nav{
 
         a{
             color:white;
-            padding:0 15px;
+            padding:0 18px;
             transition:.3s ease;
+            size:1rem;
+
           
         }
         a:hover, a:focus{

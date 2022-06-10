@@ -21,9 +21,10 @@
 
          
             <div class="line1">
-                <p>Hel</p>
+                <p>hi th</p>
+            
             </div>
-            <div class="line2"><p>lo!</p></div>
+            <div class="line2"><p>ere!</p></div>
  
           
             <nav>
@@ -71,17 +72,17 @@
             <div class= "about-me-container wrapper">
 
               
-                
-                <div class = "about-me-text">
-                   
-                    <div class="image-container">
+                <h2 class="js-scroll about-heading"> About me</h2>
+                <div class = "about-me-text js-scroll">
+                    
+                    <div class="image-container js-scroll">
                         <img src= "./assets/images.jpeg" alt="Image of Joe Gencarelli">
                     </div>
 
-                    <div class="text-container">
-                        <h2>About me</h2>
+                    <div class="text-container js-scroll">
+                       
                         <p>Hi there, I’m Joe and I love designing and building engaging applications focused on delivering a great user-experience.Outside of coding, I like camping and travelling the world ( that picture of me is from a small city in southern Calabria called Tropea - it's beaches and red onions are incredible)</p>
-                        <p>A former Chef, I am no stranger to creativity and collaboration; two things I leverage in my coding projects.</p>
+                        <p>A former Chef, I am no stranger to creativity and collaboration; both of which  I like to leverage in my coding projects.</p>
                     </div>
 
                 </div>
@@ -93,15 +94,15 @@
         <section class="skills" id="skills">
             <div class="skills-container wrapper">
 
-                <h2 class="js-scroll">my tools</h2>
+                <h2 class="js-scroll">My tools</h2>
                 <ul class= "skills-list js-scroll">
                     <li><span class="bracket">[</span></li>
                     <li>
-                        <span class="devicon-html5-plain"></span>
+                        <span class="devicon-html5-plain-wordmark"></span>
                     </li>
 
                     <li>
-                        <span class="devicon-css3-plain"></span>
+                        <span class="devicon-css3-plain-wordmark"></span>
                     </li>
 
                     <li>
@@ -113,19 +114,19 @@
                     </li>
 
                     <li>
-                        <span class="devicon-react-original"></span>
+                        <span class="devicon-react-original-wordmark"></span>
                     </li>
 
                     <li>
-                        <span class="devicon-firebase-plain"></span>
+                        <span class="devicon-firebase-plain-wordmark"></span>
                     </li>
 
                     <li> 
-                        <span class="devicon-git-plain"></span>
+                        <span class="devicon-git-plain-wordmark"></span>
                     </li> 
                     <li><span class="bracket">]</span></li>
                 </ul>
-
+                
             </div>
         </section>
 
@@ -136,49 +137,52 @@
                 <ul class="my-works">
                    
                   
-                    <li class="first-item js-scroll"><img src='./assets/square-wow.png'>
+                    <li class="project-one js-scroll"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details" id="wow">
                             <h3>Oh Wow</h3>
 
                                 <!-- DEV ICONS -->
                                 <p>JS | REST API | HTML5 | SASS</p>
-                               <button>Learn More<span class="fa-solid fa-angles-right"></span></button>   
+                               <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>   
                         </div>
                     </li>
 
-                    <li class="second-item js-scroll"><img src='./assets/BarOneDesktop.png'>
+                    <li class="project-two js-scroll"><img src='./assets/BarOneDesktop.png'>
                         <div class="project-details" id="bar-one">
                         <h3>Bar-One</h3>
 
                         <!-- DEV ICONS -->
-                        <p>HTML5| SASS | JS</p>
-                       <button>Learn More<span class="fa-solid fa-angles-right"></span></button>
+                        <p>HTML5 | SASS | JS</p>
+                       <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>
 
                         </div>
                     </li>
 
-                    <li class ="third-item js-scroll"><img src='./assets/square-wow.png'>
+                
+                    <li class="project-three js-scroll"><img src='./assets/BarOneDesktop.png'>
+                        <div class="project-details" id="bar-one">
+                        <h3>Bar-One</h3>
+
+                        <!-- DEV ICONS -->
+                        <p>HTML5 | SASS | JS</p>
+                       <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>
+
+                        </div>
+                    </li>
+
+                    <li class ="project-four js-scroll"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details">
                             <h3>Oh Wow</h3>
 
                                 <!-- DEV ICONS -->
                                 <p>JS | REST API | HTML5 | SASS</p>
-                               <button>Learn More<span class="fa-solid fa-angles-right"></span></button>   
+                               <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>   
                         </div>
                     </li>
+                 
 
-                    <li class="second-item js-scroll"><img src='./assets/BarOneDesktop.png'>
-                        <div class="project-details" id="bar-one">
-                        <h3>Bar-One</h3>
-
-                        <!-- DEV ICONS -->
-                        <p>HTML5| SASS | JS</p>
-                       <button>Learn More<span class="fa-solid fa-angles-right"></span></button>
-
-                        </div>
-                    </li>
 
                 </ul>
 
@@ -204,7 +208,9 @@
 
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="message"></textarea>   
-                        <button>Send</button>   
+                        
+                        <button id="contact-button">Send</button>  
+                       
                     </form>
                 </div>
             </div>
@@ -217,8 +223,9 @@
             <p>Designed by Joe Gencarelli</p>
             <ul class="social-contact">
 
-                <li>><a href='#'><span class="devicon-linkedin-plain"></span></a></li>
+                <li><a href='#'><span class="devicon-linkedin-plain"></span></a></li>
                 <li><a href="#"><span class="devicon-github-original"></span></a></li>
+                <li><a href="#"><span class="fa-solid fa-envelope"></span></a></li>
             </ul>
         </div>
     </footer>

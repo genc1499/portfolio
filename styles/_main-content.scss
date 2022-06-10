@@ -2,25 +2,42 @@
 .about-me{
     padding:75px 0;
     background-color: #ebebeb;
-    h2{
+    .about-me-container{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .js-scroll.about-heading{
         position:relative;
+        text-align:center;
+        left:9999px;
+        transition:.4s ease-in;
+   
+    }
+
+    .js-scroll.scrolled.about-heading{
+        left:0;
+        text-align: center;
     }
     h2:after{
             content:'';
-            border-bottom:3px solid rgb(139, 9, 9);
-            width:8%;
+            border-bottom:3px solid rgb(95, 5, 5);
+            width:40%;
             display:inline-block;
             position: absolute;
-            left: 0;
-            bottom: -7px;
+            left: 59px;
+            bottom: -5px;
         }
     
 }
 
-.about-me-text{
+.js-scroll.about-me-text{
     display:flex;
     justify-content: space-evenly;
- 
+    position:relative;
+    transition:.8s ease-in;
+    left:-9999px;
+  
     .image-container{
         width:25%;
         position:relative;
@@ -28,6 +45,7 @@
         img{
             width:100%;
             border-radius:5px;
+            box-shadow:-12px -7px 7px -5px rgb(95, 5, 5);
         }
 
     .image-box{
@@ -39,12 +57,23 @@
         top:10px;
     }
     .text-container{
+      
         width:54%;
+        transition:.4s ease-in;
         p{
         font-size:1.1rem;
         }
     }
 
+    .text-container{
+        right:0;
+ 
+    }
+
+}
+
+.js-scroll.scrolled.about-me-text{
+    left:0;
 }
 
 
@@ -85,11 +114,12 @@
     h2:after{
         content:'';
         border-bottom:3px solid rgb(139, 9, 9);
-        width:47%;
+        width:30%;
         display:inline-block;
         position: absolute;
-        left: 0;
-        bottom: -7px;
+        left: 56px;
+        bottom: -5px;
+       
     }
 
 }
@@ -137,15 +167,16 @@
     position:relative;
     h2{
         position:relative;
+        margin-bottom:60px;
     }
     h2:after{
         content:'';
         border-bottom:3px solid rgb(139, 9, 9);
-        width:27%;
+        width:40%;
         display:inline-block;
         position: absolute;
-        left: 0;
-        bottom: -7px;
+        left: 53px;
+        bottom: -13px;
     }
 }
 
@@ -155,14 +186,11 @@
     padding:0;
     margin:0;
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: center;
+    width:85%;
     
 }
 
-.first-item,.third-item{
-    border: 1px #e1e1e1 solid;
-    border-radius: 22px;
-}
 
 // General styles fior each list item
 .my-works li{
@@ -181,11 +209,6 @@ span{
     display:inline-block;
 }
 
-
-
-
-
-
 /* HIDDEN DIV WITH PROJECTS - styles for each element in the hidden DIV to follow */
 .project-details{
     height:0;
@@ -194,18 +217,18 @@ span{
     opacity:0;
     position:absolute;
     transition: .4s ease-out; 
-    background-color:white;
+    background-color: whitesmoke;
     border-radius:22px;  
     display:flex;
     flex-direction:column;
     justify-content: center; 
-    border:2px rgba(20, 98, 129) solid;
+    border:3px rgba(20, 98, 129) solid;
     border-radius:22px;  
     }
 
     .project-details h3{
         margin-top:0;
-        font-weight:600;
+   
     }
 
     .project-details>*{
@@ -213,22 +236,30 @@ span{
         margin-bottom:3px;
     }
 
- 
+    p{
+        font-size:.9rem;
+    }
+
     .project-details button{
         background-color: rgb(139, 9, 9);
         color:white;
-        padding:3px 6px;
+        padding:8px 6px;
         width:50%;
         margin:0 auto;
         border:none;
         border-radius:5px;
         transition: .3s ease-in-out;
+        font-weight:300;
+
+        span{
+            margin-left:4px;
+        }
     }
 
 // Hover and focus to transition/dispay hidden DIV on each proejct image
 .my-works li:hover .project-details, .my-works li:focus .project-details{
     height:100%;
-    opacity:.999;  
+    opacity:.99;
 }
 
     /* Hover and focus on learn more button */
@@ -247,7 +278,7 @@ span{
     .alert-text{
         text-align:left;
         margin-bottom:-10px;
-        font-size:.8 rem;
+        font-size:1rem;
         z-index:100;
 
     }
@@ -256,17 +287,22 @@ span{
     .link-container{
         display:flex;
         align-items: center;
-        justify-content: center;  
+        justify-content: center;    
     }
 
-    // Style l;ive link button
+    .devicon-github-original.colored, .devicon-github-original-wordmark.colored, .devicon-github-plain.colored{
+        color:rgba(20, 98, 129);
+        font-size:2rem;
+    }
+
+    // Style live link button
     .live-link{
-        background-color: red;
+        background-color:rgb(139, 9, 9);
         color:white;
-        padding:2px 3px;
+        padding:3px 5px;
         border-radius:5px;
         margin-left:3%;
-        font-size:.8rem;     
+        font-size:1rem;     
     }
 
    
@@ -284,64 +320,30 @@ span{
         transition:.8s ease-in-out;
     }
     
-    
-    // .js-scroll.my-works li{
-    //     transition:.4s ease-in-out; 
-    //     width:0; 
-    //     height:0;
-    //     // animation: 5s ease-out slideInFromLeft;
-    // }
-
-       // .js-scroll.scrolled.my-works li{
-    //     width:33%;
-
-    // }
-    // ----------------------------
-
-    .js-scroll.first-item{
+    .js-scroll.project-one, .js-scroll.project-three{
         transition: 1s ease-in-out; 
-        width:25%;
+        width:40%;
         position:relative;
         left:-9999px;
-        // animation: 5s ease-out slideInFromLeft;
     }
 
-    .js-scroll.second-item{
+    .js-scroll.project-two, .js-scroll.project-four {
         transition: .8s ease-in-out; 
-        width:0;
-        height:0;
+        width:40%;
+        right:9999px;
         position:relative;
-        // animation: 5s ease-out slideInFromLeft;
     }
 
-    .js-scroll.third-item{
-        transition: 1s ease-in-out; 
-        width:25%;
-        position:relative;
-        right:-9999px;
-        // animation: 5s ease-out slideInFromLeft;
-    }
-    
-    .js-scroll.scrolled.first-item{
+    .js-scroll.scrolled.project-one, .js-scroll.scrolled.project-three{
         left:0;
-
     }
-       
-    .js-scroll.scrolled.second-item{
-        height:auto;
-        width:25%;
 
-    }
-       
-    .js-scroll.scrolled.third-item{
+    .js-scroll.scrolled.project-two, .js-scroll.scrolled.project-four{
         right:0;
-
     }
-    
- 
+       
     
     h2.js-scroll.scrolled{
-        // width:100%;
         right:0;
         text-align: left;
     }

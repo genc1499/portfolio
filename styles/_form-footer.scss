@@ -2,7 +2,6 @@
 .contact{
     background-color:#ebebeb;
     padding:70px 0;
-    color:black;
     position:relative;
 }
 .contact:before{
@@ -33,14 +32,18 @@
     h2:after{
         content:'';
         border-bottom:3px solid rgb(139, 9, 9);
-        width:28%;
+        width:40%;
         display:inline-block;
         position: absolute;
-        left: 0;
-        bottom: -7px;
+        left: 59px;
+        bottom: -5px;
     }
     form{
         width:50%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+
       
         input, textarea{
             outline:none;
@@ -48,7 +51,7 @@
             border-left:none;
             border-right:none;
             border-top:none;
-            border-bottom:rgba(12, 11, 11, 0.95) solid 2px;
+            border-bottom:#28282B solid 2px;
 
         }
         input[type=text], input[type=email]{
@@ -62,26 +65,25 @@
         ::placeholder{
             font-size:.9rem;
             font-style: italic;
-            color:rgba(12, 11, 11, 0.95);
+            color:#28282B;
          
         }
 
+
+
+      
         button{
-            width: 16%;
-            padding: 10px 25px; 
+            width: 100px;
+            padding: 7px 25px; 
             margin-top:10px;
-            background-color:rgb(139, 9, 9);
+            background-color:rgb(95, 5, 5);
             border:none;
-            text-align:0;
-            margin:0 auto;
+            text-align:center;
             border-radius:5px;
-            margin-top:20px;
-            margin-left:85%;
+            margin:20px 0 0 auto;
             color:white;
-            font-weight:lighter;
             transition:.3s ease-in-out;
-            
-            
+            display:inline-block;
         }
         button:hover, button:focus{
             box-shadow: -7px 13px 18px -4px #000000; 
@@ -111,9 +113,9 @@
 // Footer Styles
 
 footer{
-    background-color:rgba(12, 11, 11, 0.95);
+    background-color: #28282B;
     text-align:center;
-    color:rgba(12, 11, 11, 0.95);
+    color:#28282B;
     padding:25px 0;
     p{
         margin:0 auto;
@@ -135,7 +137,7 @@ footer{
             display:inline-block;
             font-size: 1.5rem;
             color:rgba(20, 98, 129);
-            margin:0 3px;
+            margin:0 6px;
         }
     }
    

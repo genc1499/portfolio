@@ -246,10 +246,12 @@ html {
 
 html {
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-size: 125%;
+  color: #28282B;
 }
 
 img {
@@ -277,8 +279,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-top: 0;
+  font-weight: bold;
 }
 
 h3 {
@@ -287,10 +290,16 @@ h3 {
 
 p {
   font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+a, button {
+  font-weight: 300;
 }
 
 header {
-  background-color: rgba(12, 11, 11, 0.95);
+  background-color: #28282B;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -305,7 +314,7 @@ header .line1, header .line2 {
   width: 50vw;
   height: 100vh;
   z-index: 100;
-  background-color: black;
+  background-color: #28282B;
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -313,6 +322,7 @@ header .line1, header .line2 {
 header .line1 p, header .line2 p {
   font-size: 5rem;
   color: white;
+  font-family: "Source Code Pro", monospace;
 }
 header .line1 {
   left: 0;
@@ -324,7 +334,6 @@ header .line1 {
           animation-timing-function: ease-out;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
-  border-right: white solid 2px;
   justify-content: flex-end;
   align-items: center;
 }
@@ -342,7 +351,6 @@ header .line2 {
           animation-timing-function: ease-out;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
-  border-left: white solid 2px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -361,6 +369,7 @@ header h2 {
   left: -999px;
   font-style: italic;
   transition: 0.6s ease-in;
+  font-weight: bold;
 }
 header .jump-to-work {
   display: inline-block;
@@ -376,10 +385,11 @@ header .jump-to-work {
 header .jump-to-work:hover, header .jump-to-work:focus {
   width: 198px;
   box-shadow: 0px 10px 20px -9px black;
-  background-color: rgb(139, 9, 9);
+  background-color: rgb(95, 5, 5);
 }
 header .jump-to-work span {
   display: inline-block;
+  margin-left: 4px;
 }
 header .jump-to-work:hover span, header .jump-to-work:focus span {
   transform: rotate(90deg);
@@ -402,7 +412,8 @@ nav .main-menu-display a {
   size: 1rem;
 }
 nav .main-menu-display a:hover, nav .main-menu-display a:focus {
-  color: rgb(139, 9, 9);
+  color: rgb(95, 5, 5);
+  font-weight: 900;
 }
 nav .slide-out-menu {
   position: absolute;
@@ -425,7 +436,7 @@ nav .slide-out-menu a {
   transition: 0.3s ease;
 }
 nav .slide-out-menu a:hover, nav .slide-out-menu a:focus {
-  color: rgb(139, 9, 9);
+  color: rgb(95, 5, 5);
 }
 nav .burger-menu-button {
   display: flex;
@@ -447,7 +458,7 @@ nav .burger-menu-button div {
   border-radius: 10px;
 }
 nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:focus.burger-menu-button div {
-  background-color: rgb(139, 9, 9);
+  background-color: rgb(95, 5, 5);
 }
 
 @-webkit-keyframes slideInFromRight {
@@ -519,32 +530,48 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   padding: 75px 0;
   background-color: #ebebeb;
 }
-.about-me h2 {
+.about-me .about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me .js-scroll.about-heading {
   position: relative;
+  text-align: center;
+  left: 9999px;
+  transition: 0.4s ease-in;
+}
+.about-me .js-scroll.scrolled.about-heading {
+  left: 0;
+  text-align: center;
 }
 .about-me h2:after {
   content: "";
-  border-bottom: 3px solid rgb(139, 9, 9);
-  width: 8%;
+  border-bottom: 3px solid rgb(95, 5, 5);
+  width: 40%;
   display: inline-block;
   position: absolute;
-  left: 0;
-  bottom: -7px;
+  left: 59px;
+  bottom: -5px;
 }
 
-.about-me-text {
+.js-scroll.about-me-text {
   display: flex;
   justify-content: space-evenly;
+  position: relative;
+  transition: 0.8s ease-in;
+  left: -9999px;
 }
-.about-me-text .image-container {
+.js-scroll.about-me-text .image-container {
   width: 25%;
   position: relative;
 }
-.about-me-text img {
+.js-scroll.about-me-text img {
   width: 100%;
   border-radius: 5px;
+  box-shadow: -12px -7px 7px -5px rgb(95, 5, 5);
 }
-.about-me-text .image-box {
+.js-scroll.about-me-text .image-box {
   border: 3px solid black;
   width: 40%;
   border-radius: 5px;
@@ -552,11 +579,19 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   right: 3px;
   top: 10px;
 }
-.about-me-text .text-container {
+.js-scroll.about-me-text .text-container {
   width: 54%;
+  transition: 0.4s ease-in;
 }
-.about-me-text .text-container p {
+.js-scroll.about-me-text .text-container p {
   font-size: 1.1rem;
+}
+.js-scroll.about-me-text .text-container {
+  right: 0;
+}
+
+.js-scroll.scrolled.about-me-text {
+  left: 0;
 }
 
 .skills-container {
@@ -590,11 +625,11 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
 .skills h2:after {
   content: "";
   border-bottom: 3px solid rgb(139, 9, 9);
-  width: 47%;
+  width: 30%;
   display: inline-block;
   position: absolute;
-  left: 0;
-  bottom: -7px;
+  left: 56px;
+  bottom: -5px;
 }
 
 .skills-list {
@@ -636,15 +671,16 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
 }
 .my-work h2 {
   position: relative;
+  margin-bottom: 60px;
 }
 .my-work h2:after {
   content: "";
   border-bottom: 3px solid rgb(139, 9, 9);
-  width: 27%;
+  width: 40%;
   display: inline-block;
   position: absolute;
-  left: 0;
-  bottom: -7px;
+  left: 53px;
+  bottom: -13px;
 }
 
 .my-works {
@@ -652,12 +688,8 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.first-item, .third-item {
-  border: 1px #e1e1e1 solid;
-  border-radius: 22px;
+  justify-content: center;
+  width: 85%;
 }
 
 .my-works li {
@@ -684,18 +716,17 @@ span {
   opacity: 0;
   position: absolute;
   transition: 0.4s ease-out;
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px rgb(20, 98, 129) solid;
+  border: 3px rgb(20, 98, 129) solid;
   border-radius: 22px;
 }
 
 .project-details h3 {
   margin-top: 0;
-  font-weight: 600;
 }
 
 .project-details > * {
@@ -703,20 +734,28 @@ span {
   margin-bottom: 3px;
 }
 
+p {
+  font-size: 0.9rem;
+}
+
 .project-details button {
   background-color: rgb(139, 9, 9);
   color: white;
-  padding: 3px 6px;
+  padding: 8px 6px;
   width: 50%;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
+  font-weight: 300;
+}
+.project-details button span {
+  margin-left: 4px;
 }
 
 .my-works li:hover .project-details, .my-works li:focus .project-details {
   height: 100%;
-  opacity: 0.999;
+  opacity: 0.99;
 }
 
 /* Hover and focus on learn more button */
@@ -733,7 +772,7 @@ span {
 .alert-text {
   text-align: left;
   margin-bottom: -10px;
-  font-size: 0.8 rem;
+  font-size: 1rem;
   z-index: 100;
 }
 
@@ -743,13 +782,18 @@ span {
   justify-content: center;
 }
 
+.devicon-github-original.colored, .devicon-github-original-wordmark.colored, .devicon-github-plain.colored {
+  color: rgb(20, 98, 129);
+  font-size: 2rem;
+}
+
 .live-link {
-  background-color: red;
+  background-color: rgb(139, 9, 9);
   color: white;
-  padding: 2px 3px;
+  padding: 3px 5px;
   border-radius: 5px;
   margin-left: 3%;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .swal2-html-container {
@@ -763,37 +807,25 @@ h2.js-scroll {
   transition: 0.8s ease-in-out;
 }
 
-.js-scroll.first-item {
+.js-scroll.project-one, .js-scroll.project-three {
   transition: 1s ease-in-out;
-  width: 25%;
+  width: 40%;
   position: relative;
   left: -9999px;
 }
 
-.js-scroll.second-item {
+.js-scroll.project-two, .js-scroll.project-four {
   transition: 0.8s ease-in-out;
-  width: 0;
-  height: 0;
+  width: 40%;
+  right: 9999px;
   position: relative;
 }
 
-.js-scroll.third-item {
-  transition: 1s ease-in-out;
-  width: 25%;
-  position: relative;
-  right: -9999px;
-}
-
-.js-scroll.scrolled.first-item {
+.js-scroll.scrolled.project-one, .js-scroll.scrolled.project-three {
   left: 0;
 }
 
-.js-scroll.scrolled.second-item {
-  height: auto;
-  width: 25%;
-}
-
-.js-scroll.scrolled.third-item {
+.js-scroll.scrolled.project-two, .js-scroll.scrolled.project-four {
   right: 0;
 }
 
@@ -805,7 +837,6 @@ h2.js-scroll.scrolled {
 .contact {
   background-color: #ebebeb;
   padding: 70px 0;
-  color: black;
   position: relative;
 }
 
@@ -838,14 +869,17 @@ h2.js-scroll.scrolled {
 .contact-info h2:after {
   content: "";
   border-bottom: 3px solid rgb(139, 9, 9);
-  width: 28%;
+  width: 40%;
   display: inline-block;
   position: absolute;
-  left: 0;
-  bottom: -7px;
+  left: 59px;
+  bottom: -5px;
 }
 .contact-info form {
   width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .contact-info form input, .contact-info form textarea {
   outline: none;
@@ -853,7 +887,7 @@ h2.js-scroll.scrolled {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: rgba(12, 11, 11, 0.95) solid 2px;
+  border-bottom: #28282B solid 2px;
 }
 .contact-info form input[type=text], .contact-info form input[type=email] {
   width: calc(50% - 10px);
@@ -866,32 +900,30 @@ h2.js-scroll.scrolled {
 .contact-info form ::-moz-placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: rgba(12, 11, 11, 0.95);
+  color: #28282B;
 }
 .contact-info form :-ms-input-placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: rgba(12, 11, 11, 0.95);
+  color: #28282B;
 }
 .contact-info form ::placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: rgba(12, 11, 11, 0.95);
+  color: #28282B;
 }
 .contact-info form button {
-  width: 16%;
-  padding: 10px 25px;
+  width: 100px;
+  padding: 7px 25px;
   margin-top: 10px;
-  background-color: rgb(139, 9, 9);
+  background-color: rgb(95, 5, 5);
   border: none;
-  text-align: 0;
-  margin: 0 auto;
+  text-align: center;
   border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 85%;
+  margin: 20px 0 0 auto;
   color: white;
-  font-weight: lighter;
   transition: 0.3s ease-in-out;
+  display: inline-block;
 }
 .contact-info form button:hover, .contact-info form button:focus {
   box-shadow: -7px 13px 18px -4px #000000;
@@ -915,9 +947,9 @@ h2.js-scroll.scrolled {
 }
 
 footer {
-  background-color: rgba(12, 11, 11, 0.95);
+  background-color: #28282B;
   text-align: center;
-  color: rgba(12, 11, 11, 0.95);
+  color: #28282B;
   padding: 25px 0;
 }
 footer p {
@@ -938,7 +970,7 @@ footer .footer-content span {
   display: inline-block;
   font-size: 1.5rem;
   color: rgb(20, 98, 129);
-  margin: 0 3px;
+  margin: 0 6px;
 }
 
 @media only screen and (max-width: 750px) {

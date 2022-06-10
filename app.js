@@ -103,7 +103,7 @@
         })
 
         // Select all buttons in the portfolio section
-        const alertButtons=document.querySelectorAll('button');
+        const alertButtons=document.querySelectorAll('.learn-more');
 
         // Run a forEach on the button node listner and attach an event listner to each button
         alertButtons.forEach((button)=>{
@@ -113,14 +113,14 @@
                 const myWorks = [
                     {
                         imageUrl: './assets/final-oh-wow-alert.png',
-                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can chose a movie from a dropbdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
+                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
 
                     },
                     {
                         imageUrl: './assets/bar-one-alert.png',
-                        html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web. With a little Javascript, some functionality was added to give the user a real experience.</p><br>`+
+                        html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web.</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
                     }
@@ -131,7 +131,7 @@
          
                     Swal.fire({
                         imageUrl: myWorks[0].imageUrl,
-                        imageWidth:'400',
+                        imageWidth:'550',
                         showCloseButton: true,
                         showCancelButton: false,
                         showConfirmButton: false,
@@ -142,7 +142,7 @@
                 else if(e.target.parentElement.id==="bar-one"){
                     Swal.fire({
                         imageUrl: myWorks[1].imageUrl,
-                        imageWidth:'400',
+                        imageWidth:'550',
                         showCloseButton: true,
                         showCancelButton: false,
                         showConfirmButton: false,

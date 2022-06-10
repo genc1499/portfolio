@@ -1,6 +1,7 @@
 // Back-ground Image
 header{
-    background-color:rgba(12, 11, 11, 0.95);
+    // background-color:rgba(12, 11, 11, 0.95);
+    background-color: #28282B;
     height:100vh;
     width:100vw;
     position: relative;
@@ -15,13 +16,15 @@ header{
        width:50vw;
        height:100vh;
        z-index:100;
-       background-color:black;
+       background-color:#28282B;
        position:absolute;  
        display:flex;
        justify-content: flex-end;
        p{
            font-size:5rem;
            color:white;
+           font-family: 'Source Code Pro', monospace;
+          
        }
    }
    .line1{
@@ -30,7 +33,6 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-right:white solid 2px;
        justify-content: flex-end;
        align-items: center;
        p{
@@ -45,7 +47,6 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       border-left:white solid 2px;
        justify-content: flex-start;
        align-items: center;
    }
@@ -65,7 +66,8 @@ header{
         position:relative;
         left:-999px;
         font-style:italic;
-        transition:.6s ease-in;   
+        transition:.6s ease-in;  
+        font-weight:bold; 
     }
 
     .jump-to-work{
@@ -83,11 +85,14 @@ header{
     .jump-to-work:hover, .jump-to-work:focus{
         width:198px;
         box-shadow: 0px 10px 20px -9px black;
-        background-color:rgb(139, 9, 9);
+        // background-color:rgb(139, 9, 9);
+        // background-color:rgb(171, 10, 10);
+        background-color:rgb(95, 5, 5);
     }
     .jump-to-work span{
       
         display:inline-block;
+        margin-left:4px;
     }
 
     .jump-to-work:hover span, .jump-to-work:focus span{
@@ -117,7 +122,8 @@ nav{
           
         }
         a:hover, a:focus{
-            color:rgb(139, 9, 9);
+            color:rgb(95, 5, 5);
+            font-weight:900;
         }
 
       
@@ -145,7 +151,7 @@ nav{
             transition:.3s ease;
         } 
         a:hover,a:focus{
-            color:rgb(139, 9, 9);
+            color:rgb(95, 5, 5);
         }  
     }
 
@@ -173,7 +179,7 @@ nav{
     }
 
     .burger-menu-button:hover.burger-menu-button div, .burger-menu-button:focus.burger-menu-button div{
-        background-color:rgb(139, 9, 9);;
+        background-color:rgb(95, 5, 5);
     }
 
 }

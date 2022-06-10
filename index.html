@@ -60,9 +60,9 @@
 
         </div> <!--Wrapper Closing Tag-->
 
-        <div class="light js-scroll">
+        <!-- <div class="light js-scroll">
             <img src='./assets/vintage-bulb.png'>
-        </div>
+        </div> -->
 
     </header>
 
@@ -126,14 +126,14 @@
             </div>
         </section>
 
-        <section id = "work">
+        <section id = "work" class="my-work">
             <div class="work-container wrapper">
 
                 <h2 class="js-scroll">My Work</h2>
-                <ul class="my-works js-scroll">
+                <ul class="my-works">
                    
                   
-                    <li class="first-item"><img src='./assets/square-wow.png'>
+                    <li class="first-item js-scroll"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details" id="wow">
                             <h3>Oh Wow</h3>
@@ -144,7 +144,7 @@
                         </div>
                     </li>
 
-                    <li class="second-item"><img src='./assets/BarOneDesktop.png'>
+                    <li class="second-item js-scroll"><img src='./assets/BarOneDesktop.png'>
                         <div class="project-details" id="bar-one">
                         <h3>Bar-One</h3>
 
@@ -155,7 +155,7 @@
                         </div>
                     </li>
 
-                    <li class ="last-item"><img src='./assets/square-wow.png'>
+                    <li class ="third-item js-scroll"><img src='./assets/square-wow.png'>
                         <!-- Hidden Div for project description -->
                         <div class="project-details">
                             <h3>Oh Wow</h3>
@@ -170,32 +170,34 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact">
             <div class= "contact-container wrapper">
                 <h2>Contact</h2>
 
-                <div class="contact-text">
-                    <p>Have any questions? Want to say hi - need a recipe idea? Send me a message and I'll gladly get back to you - thanks!</p>
+                <div class="contact-info">
+                    <div class="contact-text">
+                        <p>Have any questions? Want to say hi - need a recipe idea? Send me a message and I'll gladly get back to you - thanks!</p>
+                    </div>
+
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="name">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="email">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="message"></textarea>   
+                        <button>Send Message<span class="fa-solid fa-arrow-right-long"></span></button>   
+                    </form>
                 </div>
-
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>      
-                </form>
-
             </div>
         </section>
 
     </main>
 
     <footer>
-        <p>Made by Joe Gencarelli</p>
+        <p>Designed by Joe Gencarelli</p>
     </footer>
 
     <!-- Font Awesome Script -->

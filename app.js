@@ -10,7 +10,7 @@
             line2.style.visibility="hidden";
             slideInHeading.style.left="0";
 
-        },1000);
+        },1300);
 
          // Slide out menu
 

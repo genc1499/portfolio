@@ -1,4 +1,8 @@
 // ABOUT ME SECTION
+.about-me{
+    padding:75px 0;
+}
+
 .about-me-text{
     display:flex;
     justify-content: space-between;
@@ -7,8 +11,6 @@
         width:35%;
         position:relative;
     }
-
-
         img{
             width:100%;
             border-radius:5px;
@@ -33,26 +35,57 @@
 // My SKILLS SECTION
 
 // Flex skills list
+.skills:before{
+content: "";
+background-color: #ebebeb;
+background-image: url("../assets/wave-3.svg");
+position: absolute;
+height: 3rem;
+left: 0;
+right: 0;
+background-position: top center;
+background-size: 10000px 60px;
+background-repeat: repeat-x;
+top: -60px;
+}
+.skills:after{
+    content: "";
+    background-color: #ebebeb;
+    background-image: url("../assets/wave.svg");
+    position: absolute;
+    height: 3rem;
+    left: 0;
+    right: 0;
+    background-position: top center;
+    background-size: 10000px 60px;
+    background-repeat: repeat-x;
+    bottom: -60px;
+  
+    }
+
 .skills{
     background-color:#ebebeb;
     padding:50px 0;
+    position:relative;
     h2{
         margin-top:0;
     }
 }
 .skills-list{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap:wrap;
+    margin:0 auto;
+    width:45%;
 }
     
 // List item styles
 .skills-list li{
-    width:calc((100% / 7) - 50px);
+    width:22%;
     transition:.4s ease;
     position:relative;  
     top:-9999px;
-    }
+}   
   
 // Once list is in view, add scrolled class styles
 .js-scroll.scrolled.skills-list li{
@@ -62,6 +95,9 @@
 // MY WORK SECTION
 
 // Flex UL with portfolio work
+.my-work{
+    padding:75px 0;
+}
 .my-works{
     display:flex;
     padding:0;
@@ -71,13 +107,18 @@
     
 }
 
+.first-item,.third-item{
+    border: 1px #e1e1e1 solid;
+    border-radius: 22px;
+}
+
 // General styles fior each list item
 .my-works li{
     display:flex;
     position:relative;
     img{
         object-fit: cover;
-        border-radius:5px;
+        border-radius:22px;
         width:100%;
     }
 }
@@ -102,7 +143,7 @@ span{
     position:absolute;
     transition: .4s ease-out; 
     background-color:grey;
-    border-radius:5px;  
+    border-radius:22px;  
     display:flex;
     flex-direction:column;
     justify-content: center;    
@@ -189,21 +230,65 @@ span{
 
     h2.js-scroll {
         position:relative;
-            right:-999px;
+        right:-999px;
         transition:.8s ease-in-out;
     }
     
     
-    .js-scroll.my-works li{
-        /* transition:.4s ease-in-out; */
-        width:0; 
-        animation: 5s ease-out slideInFromLeft;
-    }
-    
-    .js-scroll.scrolled.my-works li{
+    // .js-scroll.my-works li{
+    //     transition:.4s ease-in-out; 
+    //     width:0; 
+    //     height:0;
+    //     // animation: 5s ease-out slideInFromLeft;
+    // }
+
+       // .js-scroll.scrolled.my-works li{
+    //     width:33%;
+
+    // }
+    // ----------------------------
+
+    .js-scroll.first-item{
+        transition: 1s ease-in-out; 
         width:33%;
+        position:relative;
+        left:-9999px;
+        // animation: 5s ease-out slideInFromLeft;
+    }
+
+    .js-scroll.second-item{
+        transition: .8s ease-in-out; 
+        width:0;
+        height:0;
+        position:relative;
+        // animation: 5s ease-out slideInFromLeft;
+    }
+
+    .js-scroll.third-item{
+        transition: 1s ease-in-out; 
+        width:33%;
+        position:relative;
+        right:-9999px;
+        // animation: 5s ease-out slideInFromLeft;
     }
     
+    .js-scroll.scrolled.first-item{
+        left:0;
+
+    }
+       
+    .js-scroll.scrolled.second-item{
+        height:auto;
+        width:33%;
+
+    }
+       
+    .js-scroll.scrolled.third-item{
+        right:0;
+
+    }
+    
+ 
     
     h2.js-scroll.scrolled{
         width:100%;

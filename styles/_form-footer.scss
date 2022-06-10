@@ -1,4 +1,85 @@
 // Form styles
+.contact{
+    background-color:rgba(12, 11, 11, 0.95);
+    padding:70px 0;
+    color:white;
+}
+.contact-info{
+    display:flex;
+    justify-content: space-between;
+    label{
+        visibility:hidden;
+        position:absolute;
+    }
+    form{
+        width:50%;
+      
+        input, textarea{
+            outline:none;
+            background-color: transparent;
+            border-left:none;
+            border-right:none;
+            border-top:none;
+        }
+        input[type=text], input[type=email]{
+            width:calc(50% - 10px);
+        }
+        textarea{
+            width:100%;
+            height:150px;
+            margin-top:15px;
+        }
+        ::placeholder{
+            font-size:.9rem;
+            font-style: italic;
+            color:white;
+         
+        }
+
+        button{
+            width: 35%;
+            padding: 10px 20px;
+            margin-top:10px;
+            background-color:rgb(139, 9, 9);
+            border:none;
+            text-align:0;
+            margin:0 auto;
+            border-radius:5px;
+            margin-top:20px;
+            margin-left:65%;
+            color:white;
+            font-weight:lighter;
+            
+        }
+        span{
+            display:inline-block;
+            transition:.3s ease-out;
+            position:relative;
+            left:0;
+        }
+        button:hover span{
+            left:10px;
+       
+        }
+    }
+    .contact-text{
+        width:40%;
+        p{
+            font-size:1.1rem;
+            margin-top:0;
+        }
+    }
+
+}
 
 // Footer Styles
 
+footer{
+    background-color:#ebebeb;
+    text-align:center;
+    color:rgba(12, 11, 11, 0.95);
+    p{
+        margin:0 auto;
+        padding:10px 0;
+    }
+}

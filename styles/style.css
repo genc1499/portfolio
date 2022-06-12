@@ -575,17 +575,11 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   flex-direction: column;
   align-items: center;
 }
-.about-me .js-scroll.about-heading {
+.about-me .about-heading {
+  text-align: center;
   position: relative;
-  text-align: center;
-  left: 9999px;
-  transition: 0.4s ease-in;
 }
-.about-me .js-scroll.scrolled.about-heading {
-  left: 0;
-  text-align: center;
-}
-.about-me h2:after {
+.about-me .about-heading:after {
   content: "";
   border-bottom: 3px solid rgb(95, 5, 5);
   width: 40%;
@@ -594,20 +588,32 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   left: 59px;
   bottom: -5px;
 }
+.about-me .skills-image-text-container {
+  display: flex;
+}
+.about-me .about-me-text {
+  display: flex;
+}
 
-.soft-skills {
+.js-scroll.soft-skills {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-right: 12%;
+  transform: translateX(9999px);
+  transition: 1.5s ease-in;
+  position: relative;
+}
+
+.js-scroll.scrolled.soft-skills {
+  transform: translateX(0px);
 }
 
 .soft-skills li {
   display: flex;
 }
 .soft-skills li p {
-  margin-bottom: 0;
-  margin-left: 5px;
+  margin: 12px 0 0 12px;
 }
 .soft-skills li span {
   display: inline-block;
@@ -619,7 +625,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
 .soft-skills li .fa-solid.fa-people-group {
   color: rgb(88, 9, 88);
 }
-.soft-skills li .fa-solid.fa-seedling {
+.soft-skills li .fa-solid.fa-arrow-up-right-dots {
   color: rgb(52, 182, 52);
 }
 
@@ -642,30 +648,33 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   display: inline;
 }
 
-.js-scroll.about-me-text {
+.about-me-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   transition: 1s ease-in;
-  height: 0;
   background-color: whitesmoke;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0px 16px 15px -6px #28282B;
 }
-.js-scroll.about-me-text .image-container {
-  width: 30%;
+.about-me-text .js-scroll.image-container {
+  width: 0%;
   position: relative;
   margin-left: 40px;
   margin-right: 10%;
+  transition: ease-in 1s;
 }
-.js-scroll.about-me-text img {
+.about-me-text .js-scroll.scrolled.image-container {
+  width: 30%;
+}
+.about-me-text img {
   width: 100%;
   border-radius: 50%;
   box-shadow: -1px -2px 15px 2px #28282B;
 }
-.js-scroll.about-me-text .image-box {
+.about-me-text .image-box {
   border: 3px solid black;
   width: 40%;
   border-radius: 5px;
@@ -673,7 +682,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   right: 3px;
   top: 10px;
 }
-.js-scroll.about-me-text .text-container {
+.about-me-text .text-container {
   width: 60%;
   transition: 0.4s ease-in;
   border-radius: 10px;
@@ -681,16 +690,9 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   display: flex;
   flex-direction: column-reverse;
 }
-.js-scroll.about-me-text .text-container p {
+.about-me-text .text-container p {
   font-size: 1rem;
   color: #28282B;
-}
-.js-scroll.about-me-text .text-container {
-  right: 0;
-}
-
-.js-scroll.scrolled.about-me-text {
-  height: 100%;
 }
 
 .skills-container {
@@ -704,19 +706,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   padding: 50px 0 25px 0;
   position: relative;
   margin-top: -5%;
-}
-.skills .skills:after {
-  content: "";
-  background-color: #ebebeb;
-  background-image: url("../assets/wave-3.svg");
-  position: absolute;
-  height: 3rem;
-  left: 0;
-  right: 0;
-  background-position: bottom center;
-  background-size: 14058px 60px;
-  background-repeat: repeat-x;
-  bottom: -60px;
 }
 .skills h2 {
   margin-top: 0;
@@ -788,17 +777,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   width: 80%;
   box-shadow: 0px 16px 15px -9px #28282B;
   border-radius: 22px;
-}
-
-.my-works li {
-  display: flex;
-  position: relative;
-}
-.my-works li img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 22px;
-  width: 100%;
+  padding-bottom: 40px;
 }
 
 span {
@@ -832,15 +811,19 @@ span {
   margin-bottom: 3px;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .project-details button {
   background-color: rgb(139, 9, 9);
   color: white;
   padding: 8px 6px;
-  width: 50%;
+  width: 160px;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
@@ -858,7 +841,7 @@ p {
 
 /* Hover and focus on learn more button */
 .project-details button:hover, .project-details button:focus {
-  width: 51%;
+  width: 165px;
   box-shadow: -7px 13px 18px -4px #000000;
 }
 
@@ -883,6 +866,13 @@ p {
 .devicon-github-original.colored, .devicon-github-original-wordmark.colored, .devicon-github-plain.colored {
   color: rgb(20, 98, 129);
   font-size: 2rem;
+  transition: 0.3s ease-out;
+}
+.devicon-github-original.colored:hover, .devicon-github-original-wordmark.colored:hover, .devicon-github-plain.colored:hover {
+  font-size: 2.2rem;
+}
+.devicon-github-original.colored:focus, .devicon-github-original-wordmark.colored:focus, .devicon-github-plain.colored:focus {
+  font-size: 2.2rem;
 }
 
 .live-link {
@@ -892,6 +882,11 @@ p {
   border-radius: 5px;
   margin-left: 3%;
   font-size: 1rem;
+  transition: 0.3s ease-out;
+}
+
+.live-link:focus, .live-link:hover {
+  font-size: 1.2rem;
 }
 
 .swal2-html-container {
@@ -899,24 +894,32 @@ p {
   padding: 0;
 }
 
-h2.js-scroll {
-  position: relative;
-  right: -999px;
-  transition: 0.8s ease-in-out;
-}
-
 .js-scroll.project-one, .js-scroll.project-three {
   transition: 1s ease-in-out;
-  width: 50%;
+  width: 40%;
   position: relative;
   left: -9999px;
+  padding: 5px 0;
+}
+.js-scroll.project-one img, .js-scroll.project-three img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 22px;
+  width: 100%;
 }
 
 .js-scroll.project-two, .js-scroll.project-four {
   transition: 0.8s ease-in-out;
-  width: 50%;
-  right: 9999px;
+  width: 40%;
+  right: -9999px;
   position: relative;
+  padding: 5px 0;
+}
+.js-scroll.project-two img, .js-scroll.project-four img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 22px;
+  width: 100%;
 }
 
 .js-scroll.scrolled.project-one, .js-scroll.scrolled.project-three {
@@ -927,9 +930,8 @@ h2.js-scroll {
   right: 0;
 }
 
-h2.js-scroll.scrolled {
-  right: 0;
-  text-align: left;
+.project-one-image, .project-two-image, .project-three-image, .project-four-image {
+  width: 100%;
 }
 
 .contact {
@@ -1072,4 +1074,113 @@ footer .footer-content span {
 }
 footer .footer-content span:hover, footer .footer-content span:focus {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 987px) {
+  .about-me-text .text-container {
+    width: 82%;
+  }
+  .about-me-text .js-scroll.scrolled.image-container {
+    width: 45%;
+    margin-left: 0;
+  }
+
+  .js-scroll.soft-skills {
+    width: 45%;
+    margin-right: 0;
+  }
+
+  .my-works {
+    width: 100%;
+  }
+
+  .js-scroll.project-one, .js-scroll.project-three, .js-scroll.project-two, .js-scroll.project-four {
+    width: 45%;
+  }
+
+  .contact-info .contact-text, .contact-info form {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about-me-text .text-container {
+    width: 100%;
+  }
+
+  .soft-photo {
+    width: 100%;
+  }
+
+  .skills-list li {
+    padding: 10px 22px;
+  }
+  .skills-list li span {
+    font-size: 4rem;
+  }
+
+  .contact-info .contact-text, .contact-info form {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 661px) {
+  .wrapper {
+    width: 95%;
+  }
+
+  .soft-photo {
+    flex-direction: column-reverse;
+  }
+
+  .about-me-text .text-container {
+    width: 100%;
+  }
+  .about-me-text .js-scroll.scrolled.image-container {
+    width: 100%;
+  }
+
+  .js-scroll.soft-skills {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .soft-skills {
+    width: 110%;
+  }
+
+  .soft-skills li {
+    flex-direction: column;
+    width: 33%;
+  }
+  .soft-skills li p {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+    margin: 12px 0 0 0;
+  }
+  .soft-skills li span {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .skills-list li {
+    padding: 10px 1px;
+  }
+  .skills-list li span {
+    font-size: 5rem;
+  }
+
+  .my-works {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .js-scroll.project-one, .js-scroll.project-three, .js-scroll.project-two, .js-scroll.project-four {
+    width: 75%;
+  }
+
+  .contact-info .contact-text, .contact-info form {
+    width: 95%;
+  }
 }/*# sourceMappingURL=style.css.map */

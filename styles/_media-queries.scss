@@ -1,14 +1,146 @@
-// @media only screen and (max-width:750px){
-// // Hide main nav and display burger menu icon
-//     nav{
-//         .main-menu-display{
-//             width:0;
-//             height:0;
-//             overflow:hidden;
-//         }
-//         .burger-menu-button{
-//             visibility: visible;
-//         }
-//     }
+// 987
+
+@media only screen and (max-width:987px){
+    // About me section
+    .about-me-text{
+        // About me text width
+        .text-container{
+            width:82%;
+        }
+        // Image width
+        .js-scroll.scrolled.image-container{
+            width:45%;
+            margin-left:0;
+        }
+    }
+    // chnage margin on soft skills list
+    .js-scroll.soft-skills{
+        width:45%;
+        margin-right:0;
+    }
+
+    .my-works{
+        width:100%;
+    }
+    // Chnage width on portfolio list items
+    .js-scroll.project-one, .js-scroll.project-three, .js-scroll.project-two, .js-scroll.project-four{
+        width:45%;
+    }
+
+    .contact-info{
+        // Set new width for contact text and form 
+        .contact-text, form{
+            width:60%;
+        }
+    }
+
+}
+@media only screen and (max-width:767px){
+    .about-me-text{
+        .text-container{
+            width:100%;
+        }
+    }
+    .soft-photo{
+        width:100%;
+    }
+
+    .skills-list li{
+        padding:10px 22px;
+        span{
+            font-size:4rem;
+        }
+    }
+
+    // Change contact information and form width
+    .contact-info{
+        // Set new width for contact text and form 
+        .contact-text, form{
+            width:75%;
+        }
+    }
+}
+
+@media only screen and (max-width:661px){
+
+    // Chnage flex direction ot column for pohoto and soft skills
+    .wrapper{
+        width:95%;
+    }
+    .soft-photo{
+        flex-direction:column-reverse;
+    }
+    .about-me-text{
+        // About me text width
+        .text-container{
+            width:100%;
+        }
+        // Image width
+        .js-scroll.scrolled.image-container{
+            width:100%;
+         
+        }
+    }
+    // chnage margin on soft skills list
+    .js-scroll.soft-skills{
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:40px;
+   
+    }
+
+    // Center each soft skill icon
+    .soft-skills{
+        width:110%;
+    }
+    .soft-skills li{
+        flex-direction:column;
+        width:33%;
+        p{
+            font-size:.8rem;
+            margin:0;
+            text-align:center;
+            margin:12px 0 0 0;
+        }
+        span{
+            text-align:center;
+            font-size:2.5rem; 
+        }
+    }
+
+    .skills-list li{
+        padding:10px 1px;
+        span{
+            font-size:5rem;
+        }
+    }
+
+    // Chnage portfolio items direction and width
+    .my-works{
+        flex-direction:column;
+        // justify-content: center;
+        align-items:center;
+    }
+    .js-scroll.project-one, .js-scroll.project-three, .js-scroll.project-two, .js-scroll.project-four{
+        width:75%;   
+     
+    }
   
-// }
+     // Change contact information and form width
+     .contact-info{
+        // Set new width for contact text and form 
+        .contact-text, form{
+            width:95%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

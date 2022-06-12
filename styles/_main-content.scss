@@ -30,22 +30,74 @@
         }
     
 }
+.soft-skills{
+    display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+margin-right:12%;
+}
+.soft-skills li{
+    display:flex;
+    p{
+        margin-bottom:0;
+        margin-left:5px;
+    }
+    span{
+        display:inline-block;
+        font-size:2rem;
+    }
+    .fa-solid.fa-lightbulb{
+        color: rgb(192, 192, 19);
+    }
+    .fa-solid.fa-people-group{
+        color: rgb(88, 9, 88);
+    }
+    .fa-solid.fa-seedling{
+        color:rgb(52, 182, 52);
+    }
 
+}
+.soft-photo{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width:80%;
+}
+.em{
+    color:rgb(95, 5, 5);
+    font-weight:bold;
+    font-size:1rem;
+}
+
+.tropea{
+    font-style:italic;
+
+   font-size: .8rem;
+    display:inline;
+}
 .js-scroll.about-me-text{
     display:flex;
-    justify-content: space-evenly;
+    flex-direction:column;
+    align-items: center;
     position:relative;
-    transition:.8s ease-in;
-    left:-9999px;
-  
+    transition:1s ease-in;
+    height:0;
+    background-color: whitesmoke;
+    padding:50px;
+    border-radius: 10px;
+    // bottom:
+    // box-shadow:0px 10px 13px -7px #28282B;
+    box-shadow:0px 16px 15px -6px #28282B;
     .image-container{
-        width:25%;
+        width:30%;
         position:relative;
+        margin-left:40px;
+        margin-right: 10%;
     }
         img{
             width:100%;
-            border-radius:5px;
-            box-shadow:-12px -7px 7px -5px rgb(95, 5, 5);
+            border-radius:50%;
+            box-shadow:-1px -2px 15px 2px #28282B;
         }
 
     .image-box{
@@ -58,10 +110,17 @@
     }
     .text-container{
       
-        width:54%;
+        width:60%;
         transition:.4s ease-in;
+       
+        border-radius: 10px;
+      
+        margin-top:20px;
+        display:flex;
+        flex-direction: column-reverse;
         p{
-        font-size:1.1rem;
+        font-size:1rem;
+        color:#28282B;
         }
     }
 
@@ -73,7 +132,7 @@
 }
 
 .js-scroll.scrolled.about-me-text{
-    left:0;
+    height:100%;
 }
 
 
@@ -128,25 +187,27 @@
     justify-content: space-evenly;
     flex-wrap:wrap;
     margin:0 auto;
+    
 }
     
 // List item styles
 .skills-list li{
-    transition:.4s ease;
+    transition:1s ease;
     position:relative;  
-    top:-9999px;
+    top:9999px;
     padding:0 20px;
+
 
     
     span{
         color:rgba(20, 98, 129);
-        font-size:4rem;
-    }
-    .bracket{
-        font-size:6rem;
+        font-size:2.5rem;
+        transition:1s ease-in; 
         position:relative;
-        top: -33px;
+ 
+       
     }
+  
 }   
   
 // Once list is in view, add scrolled class styles
@@ -187,7 +248,9 @@
     margin:0;
     flex-wrap:wrap;
     justify-content: center;
-    width:85%;
+    width:80%;
+    box-shadow:0px 16px 15px -9px #28282B;
+    border-radius:22px;
     
 }
 
@@ -322,14 +385,14 @@ span{
     
     .js-scroll.project-one, .js-scroll.project-three{
         transition: 1s ease-in-out; 
-        width:40%;
+        width:50%;
         position:relative;
         left:-9999px;
     }
 
     .js-scroll.project-two, .js-scroll.project-four {
         transition: .8s ease-in-out; 
-        width:40%;
+        width:50%;
         right:9999px;
         position:relative;
     }

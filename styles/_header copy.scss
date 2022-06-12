@@ -167,7 +167,7 @@ nav{
         color:white;
         visibility: hidden;
         z-index:10;
-    
+        
 
         div{
             background-color: white;
@@ -179,7 +179,9 @@ nav{
     }
 
     .burger-menu-button:hover.burger-menu-button div, .burger-menu-button:focus.burger-menu-button div{
-        background-color:rgb(139, 9, 9);;
+        // background-color:rgb(139, 9, 9);
+        height:6px;
+        width:26px;
     }
 
 }

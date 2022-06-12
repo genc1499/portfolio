@@ -28,18 +28,23 @@
             const middle = document.querySelector('.b');
             const bottom = document.querySelector('.d');
             const slideOutMenu=document.querySelector('.slide-out-menu')
-           
+            const burgerMenu=document.querySelector('.burger-menu-button');
             // If true - open slide out menu
             if(clicked===true){
     
-                // Turn burger menu to an X 
-                middle.style.opacity="0";
-                top.style.transform="rotate(45deg) translate(5px, 5px)";
-                bottom.style.transform="rotate(-45deg) translate(7px, -7px)";
-               
+                // Domino effect on hamburger menu
+                top.style.transform="rotate(-75deg) translateX(-5px) translateY(5px)";
+                middle.style.transitionDelay=".1s";
+                middle.style.transform="rotate(-80deg) translateX(-5px) translateY(5px)";
+                bottom.style.transitionDelay=".2s";
+                bottom.style.transform="rotate(-90deg) translateX(-5px) translateY(5px)";
+
+
                 // Bring the slide out menu on screen
-                slideOutMenu.style.height= '25vh';
+                slideOutMenu.style.transitionDelay= '.5s';
+                slideOutMenu.style.height= '100vh';
                 slideOutMenu.style.top= '1px';
+                slideOutMenu.style.right= '0px';
 
                 // Re-assign clicked to false
                 clicked=false;
@@ -48,7 +53,7 @@
             // If false, menu slides out
             else{
                 // Revert back to burger menu button
-                middle.style.opacity="1";
+                middle.style.transform="revert";
                 top.style.transform="revert";
                 bottom.style.transform="revert";
 
@@ -59,7 +64,7 @@
                 clicked=true;
             }
         })
-
+      
         // Variable to represent the height of the screen
         // const scrollOffset = 100;
         // Select all elements with class of js-scroll - these elements will transition in when scroll event is triggered
@@ -81,9 +86,9 @@
         }
         
         // // Function to handle each event by attaching a new class:scrolled which will transition the elements in
-        // const hideScrollElement = (item) => {
-        //     item.classList.remove('scrolled');
-        // }
+        const hideScrollElement = (item) => {
+            item.classList.remove('scrolled');
+        }
 
         // Function to handle each event:
         // if the element returns true (its height is less than 100 vh ) call the displayscroll function to add class to transition 
@@ -92,9 +97,9 @@
                 if (elementInView(element)) {
                     displayScrollElement(element);
                 } 
-    // else {
-//      hideScrollElement(element);
-//    }
+    else {
+     hideScrollElement(element);
+   }
             })
         }  
         // Add event listner onto window, which will call the event handler function 
@@ -113,15 +118,15 @@
                 const myWorks = [
                     {
                         imageUrl: './assets/final-oh-wow-alert.png',
-                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button!</p><br>`+
-                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your fully functional Watch List - or just keep replaying it with a click of a button! Collaborative effort with <a href="#"> Nick Kuemmling.</a></p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://github.com/wowAppProject2"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
 
                     },
                     {
                         imageUrl: './assets/bar-one-alert.png',
                         html:`<p class="alert-text">Bar-one is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web.</p><br>`+
-                        `<div class="link-container"><a class = "git-hub-link" href="https://calm-eclair-5dc4c7.netlify.app/"><i class="devicon-github-original colored"></i></a> `+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://github.com/genc1499/joe-gencarelli-project1"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
                     }
                 ];

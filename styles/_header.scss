@@ -1,15 +1,19 @@
 // Back-ground Image
 header{
     // background-color:rgba(12, 11, 11, 0.95);
-    background-color: #28282B;
+    // background-color: #28282B;
     height:100vh;
     width:100vw;
     position: relative;
     display:flex;
     flex-direction: column;
+    background: linear-gradient(-45deg, #28282B, #28282B,whitesmoke);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     .header-contents-container{
         display:flex;
         flex-direction:column;
+       
     }
     
    .line1,.line2{
@@ -33,7 +37,7 @@ header{
        animation-duration: .6s;
        animation-timing-function: ease-out;
        animation-delay: .8s;
-       justify-content: flex-end;
+        justify-content: flex-end;
        align-items: center;
        p{
            text-align:right;
@@ -117,13 +121,12 @@ nav{
             color:white;
             padding:0 18px;
             transition:.3s ease;
-            size:1rem;
+            font-size:1rem;
 
           
         }
         a:hover, a:focus{
-            color:rgb(95, 5, 5);
-            font-weight:900;
+            font-size:1.3rem;
         }
 
       
@@ -134,25 +137,41 @@ nav{
         position: absolute;
         right:0;
         top: -50px;
+        // test
+        top:600px;
         width:100vw;
         height:0;
         transition: .4s ease-in;
         align-items: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: column;
-        background-color: rgba(12, 11, 11, 0.99);
+        background-color:#28282B; 
         overflow: hidden;
         padding:15px 0;
-      
+        z-index:1;
+        align-items:center;
+        text-align:center;
+        right:9999px;
         a{
             color:white;
             background-color: initial;
             transition:.3s ease;
+            font-size:3rem;
         } 
         a:hover,a:focus{
-            color:rgb(95, 5, 5);
+            font-size:3.2rem;
         }  
+       
+        li::after{
+            display:block;
+            border-bottom:2px solid rgba(20, 98, 129);
+            width:45vw;
+            content:'';
+            margin:0 auto;
+            top:20px;
+            position:relative;
+        }
     }
 
     // Style the "hamburger menu"
@@ -165,22 +184,31 @@ nav{
         right:66px;
         top:20px;
         color:white;
-        visibility: hidden;
+        // visibility: hidden;
         z-index:10;
-    
+        transition:.4s ease;
+        rotate:90deg;
+
 
         div{
             background-color: white;
-            width:20px;
+            width:25px;
             height:3px;
             transition: .3s ease-in;
             border-radius:10px; 
         }
     }
 
-    .burger-menu-button:hover.burger-menu-button div, .burger-menu-button:focus.burger-menu-button div{
-        background-color:rgb(95, 5, 5);
+    .burger-menu-button:hover.burger-menu-button, .burger-menu-button:focus.burger-menu-button {
+        height:25px;
     }
+ 
+    // .burger-menu-button:hover.burger-menu-button div, .burger-menu-button:focus.burger-menu-button div{
+    //     background-color:rgb(95, 5, 5);
+       
+       
+    // }
+
 
 }
 
@@ -222,5 +250,17 @@ nav{
     }
     100% {
         transform: translateX(100%);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

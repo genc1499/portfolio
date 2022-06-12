@@ -299,12 +299,15 @@ a, button {
 }
 
 header {
-  background-color: #28282B;
   height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(-45deg, #28282B, #28282B, whitesmoke);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
 }
 header .header-contents-container {
   display: flex;
@@ -409,34 +412,48 @@ nav .main-menu-display a {
   color: white;
   padding: 0 18px;
   transition: 0.3s ease;
-  size: 1rem;
+  font-size: 1rem;
 }
 nav .main-menu-display a:hover, nav .main-menu-display a:focus {
-  color: rgb(95, 5, 5);
-  font-weight: 900;
+  font-size: 1.3rem;
 }
 nav .slide-out-menu {
   position: absolute;
   right: 0;
   top: -50px;
+  top: 600px;
   width: 100vw;
   height: 0;
   transition: 0.4s ease-in;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: column;
-  background-color: rgba(12, 11, 11, 0.99);
+  background-color: #28282B;
   overflow: hidden;
   padding: 15px 0;
+  z-index: 1;
+  align-items: center;
+  text-align: center;
+  right: 9999px;
 }
 nav .slide-out-menu a {
   color: white;
   background-color: initial;
   transition: 0.3s ease;
+  font-size: 3rem;
 }
 nav .slide-out-menu a:hover, nav .slide-out-menu a:focus {
-  color: rgb(95, 5, 5);
+  font-size: 3.2rem;
+}
+nav .slide-out-menu li::after {
+  display: block;
+  border-bottom: 2px solid rgb(20, 98, 129);
+  width: 45vw;
+  content: "";
+  margin: 0 auto;
+  top: 20px;
+  position: relative;
 }
 nav .burger-menu-button {
   display: flex;
@@ -447,18 +464,19 @@ nav .burger-menu-button {
   right: 66px;
   top: 20px;
   color: white;
-  visibility: hidden;
   z-index: 10;
+  transition: 0.4s ease;
+  rotate: 90deg;
 }
 nav .burger-menu-button div {
   background-color: white;
-  width: 20px;
+  width: 25px;
   height: 3px;
   transition: 0.3s ease-in;
   border-radius: 10px;
 }
-nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:focus.burger-menu-button div {
-  background-color: rgb(95, 5, 5);
+nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.burger-menu-button {
+  height: 25px;
 }
 
 @-webkit-keyframes slideInFromRight {
@@ -526,6 +544,28 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
     transform: translateX(100%);
   }
 }
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .about-me {
   padding: 75px 0;
   background-color: #ebebeb;
@@ -555,21 +595,75 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   bottom: -5px;
 }
 
+.soft-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 12%;
+}
+
+.soft-skills li {
+  display: flex;
+}
+.soft-skills li p {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.soft-skills li span {
+  display: inline-block;
+  font-size: 2rem;
+}
+.soft-skills li .fa-solid.fa-lightbulb {
+  color: rgb(192, 192, 19);
+}
+.soft-skills li .fa-solid.fa-people-group {
+  color: rgb(88, 9, 88);
+}
+.soft-skills li .fa-solid.fa-seedling {
+  color: rgb(52, 182, 52);
+}
+
+.soft-photo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 80%;
+}
+
+.em {
+  color: rgb(95, 5, 5);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.tropea {
+  font-style: italic;
+  font-size: 0.8rem;
+  display: inline;
+}
+
 .js-scroll.about-me-text {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  transition: 0.8s ease-in;
-  left: -9999px;
+  transition: 1s ease-in;
+  height: 0;
+  background-color: whitesmoke;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 16px 15px -6px #28282B;
 }
 .js-scroll.about-me-text .image-container {
-  width: 25%;
+  width: 30%;
   position: relative;
+  margin-left: 40px;
+  margin-right: 10%;
 }
 .js-scroll.about-me-text img {
   width: 100%;
-  border-radius: 5px;
-  box-shadow: -12px -7px 7px -5px rgb(95, 5, 5);
+  border-radius: 50%;
+  box-shadow: -1px -2px 15px 2px #28282B;
 }
 .js-scroll.about-me-text .image-box {
   border: 3px solid black;
@@ -580,18 +674,23 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   top: 10px;
 }
 .js-scroll.about-me-text .text-container {
-  width: 54%;
+  width: 60%;
   transition: 0.4s ease-in;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .js-scroll.about-me-text .text-container p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #28282B;
 }
 .js-scroll.about-me-text .text-container {
   right: 0;
 }
 
 .js-scroll.scrolled.about-me-text {
-  left: 0;
+  height: 100%;
 }
 
 .skills-container {
@@ -640,19 +739,16 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
 }
 
 .skills-list li {
-  transition: 0.4s ease;
+  transition: 1s ease;
   position: relative;
-  top: -9999px;
+  top: 9999px;
   padding: 0 20px;
 }
 .skills-list li span {
   color: rgb(20, 98, 129);
-  font-size: 4rem;
-}
-.skills-list li .bracket {
-  font-size: 6rem;
+  font-size: 2.5rem;
+  transition: 1s ease-in;
   position: relative;
-  top: -33px;
 }
 
 .js-scroll.scrolled.skills-list li {
@@ -689,7 +785,9 @@ nav .burger-menu-button:hover.burger-menu-button div, nav .burger-menu-button:fo
   margin: 0;
   flex-wrap: wrap;
   justify-content: center;
-  width: 85%;
+  width: 80%;
+  box-shadow: 0px 16px 15px -9px #28282B;
+  border-radius: 22px;
 }
 
 .my-works li {
@@ -809,14 +907,14 @@ h2.js-scroll {
 
 .js-scroll.project-one, .js-scroll.project-three {
   transition: 1s ease-in-out;
-  width: 40%;
+  width: 50%;
   position: relative;
   left: -9999px;
 }
 
 .js-scroll.project-two, .js-scroll.project-four {
   transition: 0.8s ease-in-out;
-  width: 40%;
+  width: 50%;
   right: 9999px;
   position: relative;
 }
@@ -972,14 +1070,6 @@ footer .footer-content span {
   color: rgb(20, 98, 129);
   margin: 0 6px;
 }
-
-@media only screen and (max-width: 750px) {
-  nav .main-menu-display {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  nav .burger-menu-button {
-    visibility: visible;
-  }
+footer .footer-content span:hover, footer .footer-content span:focus {
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

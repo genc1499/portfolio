@@ -27,14 +27,14 @@
             <div class="line2"><p>ere!</p></div>
  
           
-            <nav>
+            <!-- <nav>
                 <ul class="main-menu-display">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Work</a></li>
                     <li><a href="#">Contact</a></li>   
-                </ul>
-
+                </ul> -->
+                <nav>
                 <!-- Hambuger Icon -->
                 <div class="burger-menu-button">
                     <div class="o"></div>
@@ -74,15 +74,54 @@
               
                 <h2 class="js-scroll about-heading"> About me</h2>
                 <div class = "about-me-text js-scroll">
-                    
-                    <div class="image-container js-scroll">
-                        <img src= "./assets/images.jpeg" alt="Image of Joe Gencarelli">
-                    </div>
+                    <div class="soft-photo">
+                       
+                            <ul class="soft-skills">
+                                <li> <span class="fa-solid fa-lightbulb"></span><p>Problem-solver</p></li>
+                                <li><span class="fa-solid fa-people-group"></span><p>Team-player</p></li>
+                                <li><span class="fa-solid fa-seedling"></span><p>Growth Mindset</p></li>
+                            </ul>
+
+                        
+                            <div class="image-container js-scroll">
+                                <img src= "./assets/joe.jpg" alt="Image of Joe Gencarelli">
+                            </div>
+                        </div>
 
                     <div class="text-container js-scroll">
+                        <ul class= "skills-list js-scroll">
                        
-                        <p>Hi there, I’m Joe and I love designing and building engaging applications focused on delivering a great user-experience.Outside of coding, I like camping and travelling the world ( that picture of me is from a small city in southern Calabria called Tropea - it's beaches and red onions are incredible)</p>
-                        <p>A former Chef, I am no stranger to creativity and collaboration; both of which  I like to leverage in my coding projects.</p>
+                             <li><span class="devicon-html5-plain-wordmark"></span>
+                            </li>
+        
+                            <li>
+                                <span class="devicon-css3-plain-wordmark"></span>
+                            </li>
+        
+                            <li>
+                                <span class="devicon-sass-original"></span>
+                            </li>
+        
+                            <li>
+                                <span class="devicon-javascript-plain"></span>        
+                            </li>
+        
+                            <li>
+                                <span class="devicon-react-original-wordmark"></span>
+                            </li>
+        
+                            <li>
+                                <span class="devicon-firebase-plain-wordmark"></span>
+                            </li>
+        
+                            <li> 
+                                <span class="devicon-git-plain-wordmark"></span>
+                            </li> 
+                         
+                        </ul>
+                       
+                        <p>Hi there, I`m Joe and I love designing and building <span class="em">responsive</span> and <span class="em">accessible</span> applications with an emphasis on delivering a great <span class="em">user-experience</span>.Outside of coding, I enjoy making bread and pasta from scratch and travelling the world <span class="tropea">(that picture of me is from a small city in southern Italy called Tropea - it's beaches and red onions are incredible!)</span>
+                        A former Chef, I am no stranger to <span class="em">creativity</span> and the quest of <span class="em">expanding my knoweldge</span>. Here's a (growing) stack of my tech skills:  </p>
                     </div>
 
                 </div>
@@ -91,10 +130,11 @@
             </div>
         </section>
 
-        <section class="skills" id="skills">
+        <!-- <section class="skills" id="skills">
             <div class="skills-container wrapper">
 
                 <h2 class="js-scroll">My tools</h2>
+               
                 <ul class= "skills-list js-scroll">
                     <li><span class="bracket">[</span></li>
                     <li>
@@ -128,7 +168,7 @@
                 </ul>
                 
             </div>
-        </section>
+        </section> -->
 
         <section id = "work" class="my-work">
             <div class="work-container wrapper">
@@ -143,7 +183,7 @@
                             <h3>Oh Wow</h3>
 
                                 <!-- DEV ICONS -->
-                                <p>JS | REST API | HTML5 | SASS</p>
+                                <p>JS | REST API | HTML5 | SASS | Pair Programming</p>
                                <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>   
                         </div>
                     </li>
@@ -177,7 +217,7 @@
                             <h3>Oh Wow</h3>
 
                                 <!-- DEV ICONS -->
-                                <p>JS | REST API | HTML5 | SASS</p>
+                                <p>JS | REST API | HTML5 | SASS | Pair Programming</p>
                                <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>   
                         </div>
                     </li>
@@ -199,7 +239,7 @@
                         <p>Have any questions? Want to say hi - need a recipe idea? Send me a message and I'll gladly get back to you - thanks!</p>
                     </div>
 
-                    <form>
+                    <form name="contact" method="POST" data-netlify="true">
                         <label for="name">Name</label>
                         <input type="text" id="name" placeholder="name">
 
@@ -209,7 +249,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="message"></textarea>   
                         
-                        <button id="contact-button">Send</button>  
+                        <button id="contact-button" type="submit">Send</button>  
                        
                     </form>
                 </div>
@@ -223,8 +263,8 @@
             <p>Designed by Joe Gencarelli</p>
             <ul class="social-contact">
 
-                <li><a href='#'><span class="devicon-linkedin-plain"></span></a></li>
-                <li><a href="#"><span class="devicon-github-original"></span></a></li>
+                <li><a href='https://www.linkedin.com/in/joe-gencarelli-02254b16/'><span class="devicon-linkedin-plain"></span></a></li>
+                <li><a href="https://github.com/genc1499"><span class="devicon-github-original"></span></a></li>
                 <li><a href="#"><span class="fa-solid fa-envelope"></span></a></li>
             </ul>
         </div>

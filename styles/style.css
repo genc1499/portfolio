@@ -467,7 +467,6 @@ nav .burger-menu-button {
   z-index: 10;
   transition: 0.4s ease;
   transform: rotate(90deg);
-  position: fixed;
 }
 nav .burger-menu-button div {
   background-color: white;

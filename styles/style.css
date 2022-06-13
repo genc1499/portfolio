@@ -1097,6 +1097,10 @@ footer .footer-content span:hover, footer .footer-content span:focus {
     width: 45%;
   }
 
+  .project-details {
+    padding: 0 10px;
+  }
+
   .contact-info .contact-text, .contact-info form {
     width: 60%;
   }

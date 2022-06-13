@@ -126,7 +126,7 @@
                     },
                     {
                         imageUrl: './assets/bar-one-alert.png',
-                        html:`<p class="alert-text">Bar-One is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life, on the web.</p><br>`+
+                        html:`<p class="alert-text">Bar-One is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life on the web.</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/genc1499/joe-gencarelli-project1"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
                     }

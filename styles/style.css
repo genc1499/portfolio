@@ -632,7 +632,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
 .soft-photo {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
   width: 80%;
 }
 
@@ -663,12 +662,11 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
 .about-me-text .js-scroll.image-container {
   width: 0%;
   position: relative;
-  margin-left: 40px;
-  margin-right: 10%;
+  margin-right: 11%;
   transition: ease-in 1s;
 }
 .about-me-text .js-scroll.scrolled.image-container {
-  width: 30%;
+  width: 45%;
 }
 .about-me-text img {
   width: 100%;
@@ -773,7 +771,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 80%;
   box-shadow: 0px 16px 15px -9px #28282B;
   border-radius: 22px;
@@ -899,7 +897,7 @@ p {
   width: 40%;
   position: relative;
   left: -9999px;
-  padding: 5px 0;
+  padding: 5px 0px;
 }
 .js-scroll.project-one img, .js-scroll.project-three img {
   -o-object-fit: cover;
@@ -913,7 +911,7 @@ p {
   width: 40%;
   right: -9999px;
   position: relative;
-  padding: 5px 0;
+  padding: 5px 0px;
 }
 .js-scroll.project-two img, .js-scroll.project-four img {
   -o-object-fit: cover;

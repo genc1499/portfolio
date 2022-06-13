@@ -40,8 +40,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 margin-right:12%;
-// transform:translateX(999px);
-// left:700px;
 left:999px;
 position:relative;
 transition:.8s ease-in;
@@ -83,7 +81,6 @@ transition:.8s ease-in;
 .soft-photo{
     display:flex;
     flex-direction: row-reverse;
-    justify-content: center;
     width:80%;
 }
 
@@ -116,14 +113,13 @@ transition:.8s ease-in;
     .js-scroll.image-container{
         width:0%;
         position:relative;
-        margin-left:40px;
-        margin-right: 10%;
+        margin-right: 11%;
         transition:ease-in 1s;
     }
 
     // Chnage width for when scroll event occurs
     .js-scroll.scrolled.image-container{
-        width:30%;
+        width:45%;
     }
         img{
             width:100%;
@@ -248,7 +244,7 @@ transition:.8s ease-in;
     padding:0;
     margin:0;
     flex-wrap:wrap;
-    justify-content: center;
+    justify-content:space-evenly;
     width:80%;
     box-shadow:0px 16px 15px -9px #28282B;
     border-radius:22px;
@@ -387,7 +383,8 @@ span{
     width:40%;
     position:relative;
     left:-9999px;
-    padding:5px 0;
+    padding:5px 0px;
+    
     img{
         object-fit: cover;
         border-radius:22px;
@@ -400,7 +397,7 @@ span{
     width:40%;
     right:-9999px;
     position:relative;
-    padding:5px 0;
+    padding:5px 0px;
     img{
         object-fit: cover;
         border-radius:22px;

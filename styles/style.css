@@ -466,7 +466,7 @@ nav .burger-menu-button {
   color: white;
   z-index: 10;
   transition: 0.4s ease;
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 nav .burger-menu-button div {
   background-color: white;
@@ -600,13 +600,13 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   flex-direction: column;
   justify-content: space-evenly;
   margin-right: 12%;
-  transform: translateX(9999px);
-  transition: 1.5s ease-in;
+  left: 999px;
   position: relative;
+  transition: 0.8s ease-in;
 }
 
 .js-scroll.scrolled.soft-skills {
-  transform: translateX(0px);
+  left: 0;
 }
 
 .soft-skills li {
@@ -720,27 +720,26 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   bottom: -5px;
 }
 
-.skills-list {
+.js-scroll.skills-list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 0 auto;
+  transition: 0.7s ease;
+  position: relative;
+  top: 85px;
 }
 
-.skills-list li {
-  transition: 1s ease;
-  position: relative;
-  top: 9999px;
+.js-scroll.skills-list li {
   padding: 0 20px;
 }
-.skills-list li span {
+.js-scroll.skills-list li span {
   color: rgb(20, 98, 129);
   font-size: 2.5rem;
-  transition: 1s ease-in;
   position: relative;
 }
 
-.js-scroll.scrolled.skills-list li {
+.js-scroll.scrolled.skills-list {
   top: 0;
 }
 
@@ -849,7 +848,7 @@ p {
   transform: rotate(-90deg);
 }
 
-/* SWEET ALERT STYLES for each window "pop-up////////////////////// */
+/* SWEET ALERT STYLES for each window "pop-up"////////////////////// */
 .alert-text {
   text-align: left;
   margin-bottom: -10px;
@@ -1111,10 +1110,10 @@ footer .footer-content span:hover, footer .footer-content span:focus {
     width: 100%;
   }
 
-  .skills-list li {
+  .js-scroll.skills-list li {
     padding: 10px 22px;
   }
-  .skills-list li span {
+  .js-scroll.skills-list li span {
     font-size: 4rem;
   }
 
@@ -1164,11 +1163,15 @@ footer .footer-content span:hover, footer .footer-content span:focus {
     font-size: 2.5rem;
   }
 
-  .skills-list li {
-    padding: 10px 1px;
+  .js-scroll.skills-list {
+    margin-top: 25px;
   }
-  .skills-list li span {
-    font-size: 5rem;
+
+  .js-scroll.skills-list li {
+    padding: 10px 10px;
+  }
+  .js-scroll.skills-list li span {
+    font-size: 4.5rem;
   }
 
   .my-works {
@@ -1181,6 +1184,6 @@ footer .footer-content span:hover, footer .footer-content span:focus {
   }
 
   .contact-info .contact-text, .contact-info form {
-    width: 95%;
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */

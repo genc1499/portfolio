@@ -77,7 +77,8 @@
             const elementTop = el.getBoundingClientRect().top;
             
             // Return true if the element is less than the height between the element and the screen
-            return (elementTop < window.innerHeight);
+            // return (elementTop < window.innerHeight);
+            return ((elementTop - window.innerHeight)<=50);
         };
 
         const displayScrollElement = (item) => {

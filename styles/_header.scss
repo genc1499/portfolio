@@ -1,7 +1,5 @@
-// Back-ground Image
+// Header Styles
 header{
-    // background-color:rgba(12, 11, 11, 0.95);
-    // background-color: #28282B;
     height:100vh;
     width:100vw;
     position: relative;
@@ -62,7 +60,7 @@ header{
    }
     h1{
         color:white;
-        // animation: 3s ease-out 0s 1 slideInFromLeft;
+ 
     }
     h2{
         color:rgba(20, 98, 129);
@@ -89,8 +87,6 @@ header{
     .jump-to-work:hover, .jump-to-work:focus{
         width:198px;
         box-shadow: 0px 10px 20px -9px black;
-        // background-color:rgb(139, 9, 9);
-        // background-color:rgb(171, 10, 10);
         background-color:rgb(95, 5, 5);
     }
     .jump-to-work span{
@@ -137,7 +133,6 @@ nav{
         position: absolute;
         right:0;
         top: -50px;
-        // test
         top:600px;
         width:100vw;
         height:0;
@@ -187,7 +182,7 @@ nav{
         // visibility: hidden;
         z-index:10;
         transition:.4s ease;
-        rotate:90deg;
+        transform:rotate(90deg);
 
 
         div{

@@ -40,14 +40,19 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 margin-right:12%;
-transform:translateX(9999px);
-transition:1.5s ease-in;
+// transform:translateX(999px);
+// left:700px;
+left:999px;
 position:relative;
+transition:.8s ease-in;
+
 }
 
 // Transition soft skills in with JS scroll event handler
+
 .js-scroll.scrolled.soft-skills{
-    transform:translateX(0px);
+    // transform:translateX(0px);
+   left:0;
 }
 
 // Style the words beside each icon
@@ -152,9 +157,6 @@ position:relative;
 }
 
 
-
-
-
 // My SKILLS - tech DEV ICONS
 .skills-container{
     display:flex;
@@ -184,30 +186,31 @@ position:relative;
     }
 }
 // Flex skills UL
-.skills-list{
+.js-scroll.skills-list{
     display:flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
-    margin:0 auto;   
+    margin:0 auto; 
+    transition:.7s ease;
+    position:relative;  
+    top:85px;  
 }
     
 // List item styles
-.skills-list li{
-    transition:1s ease;
-    position:relative;  
-    top:9999px;
+.js-scroll.skills-list li{
+  
     padding:0 20px;
 
     // Style each DEV Icon
     span{
         color:rgba(20, 98, 129);
         font-size:2.5rem;
-        transition:1s ease-in; 
+        // transition:1s ease-in; 
         position:relative;
     }
 }
 // Once list is in view, add scrolled class styles
-.js-scroll.scrolled.skills-list li{
+.js-scroll.scrolled.skills-list{
     top:0;
 }
 
@@ -251,15 +254,6 @@ position:relative;
     padding-bottom: 40px;  
 }
 
-// General styles for each list item
-// .my-works li{
-//     display:flex;
-//     position:relative;
- 
-// }
-// .project-two-image{
-//     display:flex;
-// }
 span{
     transition: .3s ease-in;
     display:inline-block;
@@ -333,7 +327,7 @@ span{
     transform: rotate(-90deg);
 }
 
-/* SWEET ALERT STYLES for each window "pop-up////////////////////// */
+/* SWEET ALERT STYLES for each window "pop-up"////////////////////// */
 
 // Paragraph styes in each text alert box
 .alert-text{
@@ -429,4 +423,3 @@ span{
    
 
 
-// CONTACT SECTION

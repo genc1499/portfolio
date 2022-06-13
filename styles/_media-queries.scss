@@ -45,7 +45,7 @@
         width:100%;
     }
 
-    .skills-list li{
+    .js-scroll.skills-list li{
         padding:10px 22px;
         span{
             font-size:4rem;
@@ -109,10 +109,13 @@
         }
     }
 
-    .skills-list li{
-        padding:10px 1px;
+    .js-scroll.skills-list{
+        margin-top: 25px;
+    }
+    .js-scroll.skills-list li{
+        padding:10px 10px;
         span{
-            font-size:5rem;
+            font-size:4.5rem;
         }
     }
 
@@ -131,7 +134,7 @@
      .contact-info{
         // Set new width for contact text and form 
         .contact-text, form{
-            width:95%;
+            width:90%;
         }
     }
 

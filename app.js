@@ -119,7 +119,7 @@
                 const myWorks = [
                     {
                         imageUrl: './assets/final-oh-wow-alert.png',
-                        html:`<p class="alert-text">What started as a humorous idea truly evolved into a very functional app. Using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Loved that wow and want to see the movie? Add it to your Watch List or just keep replaying it with a click of a button! Collaborative effort with <a href="#"> Nick Kuemmling.</a></p><br>`+
+                        html:`<p class="alert-text">A collaboration with <a href="#"> Nick Kuemmling.</a>, using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Add and remove movies to your watch list and then get another wow!</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/wowAppProject2"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
 

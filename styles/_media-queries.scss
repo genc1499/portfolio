@@ -1,5 +1,9 @@
-// 987
 
+@media only screen and (max-width:1136px){
+    .about-me-text{
+        width:100%;
+    }
+}
 @media only screen and (max-width:987px){
     // About me section
     .about-me-text{
@@ -42,6 +46,7 @@
 }
 @media only screen and (max-width:767px){
     .about-me-text{
+     
         .text-container{
             width:100%;
         }

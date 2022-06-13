@@ -467,13 +467,13 @@ nav .burger-menu-button {
   z-index: 10;
   transition: 0.4s ease;
   transform: rotate(90deg);
+  position: fixed;
 }
 nav .burger-menu-button div {
   background-color: white;
   width: 25px;
   height: 3px;
   transition: 0.3s ease-in;
-  border-radius: 10px;
 }
 nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.burger-menu-button {
   height: 25px;
@@ -754,16 +754,20 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
 }
 .my-work h2 {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 75px;
 }
 .my-work h2:after {
-  content: "";
-  border-bottom: 3px solid rgb(139, 9, 9);
-  width: 40%;
+  content: "hover for details";
+  border-top: 3px solid rgb(139, 9, 9);
+  width: 73%;
   display: inline-block;
   position: absolute;
-  left: 53px;
-  bottom: -13px;
+  left: 22px;
+  bottom: -28px;
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 6px;
 }
 
 .my-works {

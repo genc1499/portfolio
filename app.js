@@ -48,6 +48,27 @@
 
                 // Re-assign clicked to false
                 clicked=false;
+
+                // Close menu after any link is clicked
+                const navItems =document.querySelectorAll(".nav-links")
+                
+                navItems.forEach((item)=>{
+                    item.addEventListener('click', (e)=>{
+                        if(e.target.className==="nav-links")
+                        {
+                            middle.style.transform="revert";
+                            top.style.transform="revert";
+                            bottom.style.transform="revert";
+            
+                            //Bring slide out menu off screen
+                            slideOutMenu.style.height= '0';
+                            slideOutMenu.style.top= '-50px';
+                            // Re-assign clicked to true    
+
+                        }
+                    })
+                })
+            
             }
 
             // If false, menu slides out

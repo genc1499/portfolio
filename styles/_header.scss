@@ -128,6 +128,8 @@ nav{
       
     }
 
+    
+
     // Slide out menu styles
     .slide-out-menu{
         position: absolute;
@@ -148,6 +150,7 @@ nav{
         align-items:center;
         text-align:center;
         right:9999px;
+  
         a{
             color:white;
             background-color: initial;
@@ -179,21 +182,20 @@ nav{
         right:66px;
         top:20px;
         color:white;
-        // visibility: hidden;
         z-index:10;
         transition:.4s ease;
         transform:rotate(90deg);
-
-
+        position:fixed;
+   
         div{
             background-color: white;
             width:25px;
             height:3px;
             transition: .3s ease-in;
-            border-radius:10px; 
         }
     }
 
+  
     .burger-menu-button:hover.burger-menu-button, .burger-menu-button:focus.burger-menu-button {
         height:25px;
     }

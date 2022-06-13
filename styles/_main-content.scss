@@ -225,16 +225,20 @@ transition:.8s ease-in;
     position:relative;
     h2{
         position:relative;
-        margin-bottom:60px;
+        margin-bottom:75px;
     }
     h2:after{
-        content:'';
-        border-bottom:3px solid rgb(139, 9, 9);
-        width:40%;
-        display:inline-block;
+        content: "hover for details";
+        border-top: 3px solid rgb(139, 9, 9);
+        width: 73%;
+        display: inline-block;
         position: absolute;
-        left: 53px;
-        bottom: -13px;
+        left: 22px;
+        bottom: -28px;
+        font-size: 16px;
+        font-style: italic;
+        text-align: center;
+        margin-top:6px;
     }
 }
 

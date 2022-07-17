@@ -29,6 +29,7 @@
             const bottom = document.querySelector('.d');
             const slideOutMenu=document.querySelector('.slide-out-menu')
             const burgerMenu=document.querySelector('.burger-menu-button');
+           
             // If true - open slide out menu
             if(clicked===true){
     
@@ -39,13 +40,21 @@
                 bottom.style.transitionDelay=".2s";
                 bottom.style.transform="rotate(-90deg) translateX(-5px) translateY(5px)";
 
+                if(window.innerWidth>=767)
+                {// Bring the slide out menu on screen
+                    slideOutMenu.style.transitionDelay= '.3s';
+                    slideOutMenu.style.height= '12vh';
+                    slideOutMenu.style.top= '1px';
+                    slideOutMenu.style.right= '0px';
+                }
 
-                // Bring the slide out menu on screen
-                slideOutMenu.style.transitionDelay= '.3s';
-                slideOutMenu.style.height= '12vh';
-                slideOutMenu.style.top= '1px';
-                slideOutMenu.style.right= '0px';
-
+                else if (window.innerWidth<767){
+                    slideOutMenu.style.transitionDelay= '.3s';
+                    slideOutMenu.style.height= '100vh';
+                    slideOutMenu.style.top= '1px';
+                    slideOutMenu.style.right= '0px';
+                    console.log(true);
+                }
                 // Re-assign clicked to false
                 clicked=false;
 

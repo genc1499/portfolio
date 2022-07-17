@@ -42,7 +42,7 @@
 
                 // Bring the slide out menu on screen
                 slideOutMenu.style.transitionDelay= '.3s';
-                slideOutMenu.style.height= '100vh';
+                slideOutMenu.style.height= '12vh';
                 slideOutMenu.style.top= '1px';
                 slideOutMenu.style.right= '0px';
 

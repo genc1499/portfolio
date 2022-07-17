@@ -8,10 +8,26 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chathura&family=Fredericka+the+Great&family=Open+Sans&family=Roboto:wght@300&family=Tulpen+One&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./styles/style.css">      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Open+Sans&family=Source+Code+Pro:ital,wght@1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles/style.css"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">     
     <title>Coder Joe's</title>
 </head>
+
+<style>
+    .he-sp{
+        display:block;
+    }
+
+    
+</style>
 
 <body>
     <header>
@@ -40,6 +56,7 @@
                 <!-- Slide-out Menu -->
                     <ul class="slide-out-menu">
                         <li><a class= "nav-links" href="#about">About</a></li>
+                        <li><a class= "nav-links" href="#skills">Skills</a></li>
                         <li><a class= "nav-links" href="#work">Work</a></li>
                         <li><a class= "nav-links" href="#contact">Contact</a></li>
                     </ul>
@@ -47,7 +64,7 @@
             </nav>
 
             <div class='headings-container'>
-                <h1>I'm Joe Gencarelli</h1>
+                <h1>I'm <span class="h1-color">Joe Gencarelli</span></h1>
                 <h2>a Front End Developer</h2>
                 <a class="jump-to-work" href="#work">View My Work<span class="fa-solid fa-angles-right"></span></a>
             </div>
@@ -67,11 +84,11 @@
                         <div class="soft-photo">
                        
                             <!-- Font awesome icon skills set -->
-                            <ul class="soft-skills js-scroll">
+                            <!-- <ul class="soft-skills js-scroll">
                                 <li> <span class="fa-solid fa-lightbulb"></span><p>Problem Solver</p></li>
                                 <li><span class="fa-solid fa-people-group"></span><p>Team Player</p></li>
                                 <li><span class="fa-solid fa-arrow-up-right-dots"></span><p>Growth Mindset</p></li>
-                            </ul>
+                            </ul> -->
 
                         
                         <div class="image-container js-scroll">
@@ -79,6 +96,8 @@
                         </div>
 
                     </div>
+
+                    
 
                     <div class="text-container">
                        
@@ -90,41 +109,53 @@
                         Here's a (growing) stack of <span class="em">my tech skills:</span></p>
                     </div>
         
-                    <ul class= "skills-list js-scroll">
-                       
-                        <li><span class="devicon-html5-plain-wordmark"></span>
-                       </li>
-   
-                       <li>
-                           <span class="devicon-css3-plain-wordmark"></span>
-                       </li>
-   
-                       <li>
-                           <span class="devicon-sass-original"></span>
-                       </li>
-   
-                       <li>
-                           <span class="devicon-javascript-plain"></span>        
-                       </li>
-   
-                       <li>
-                           <span class="devicon-react-original-wordmark"></span>
-                       </li>
-   
-                       <li>
-                           <span class="devicon-firebase-plain-wordmark"></span>
-                       </li>
-   
-                       <li> 
-                           <span class="devicon-git-plain-wordmark"></span>
-                       </li> 
-                    
-                   </ul>
-              
+                    <!-- 
+               -->
                 </div>
-               
+
+              
 
             </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <ul class= "skills-list js-scroll">
+                       
+                <li><span class="devicon-html5-plain-wordmark"></span>
+               </li>
+
+               <li>
+                   <span class="devicon-css3-plain-wordmark"></span>
+               </li>
+
+               <li>
+                   <span class="devicon-sass-original"></span>
+               </li>
+
+               <li>
+                   <span class="devicon-javascript-plain"></span>        
+               </li>
+
+               <li>
+                   <span class="devicon-react-original-wordmark"></span>
+               </li>
+
+               <li>
+                   <span class="devicon-firebase-plain-wordmark"></span>
+               </li>
+
+               <li> 
+                   <span class="devicon-git-plain-wordmark"></span>
+               </li> 
+
+               <li>
+               <span class = "devicon-vscode-plain-wordmark"></span>
+               </li>
+            
+           </ul>
+      
+
         </section>
 
         <!-- My works section -->
@@ -169,14 +200,14 @@
                     <li class="project-three js-scroll">
                         
                         <div class="project-three-image">
-                            <img src='./assets/barONE.png' alt="Image of Bar-One Project">
+                            <img src='./assets/your-extra-cover.png' alt="Image of Bar-One Project">
                         </div>
 
-                        <div class="project-details" id="bar-one">
-                        <h3>Bar-One</h3>
+                        <div class="project-details" id="your-extra">
+                        <h3>Your Extra</h3>
 
                         <!-- DEV ICONS -->
-                        <p>HTML5 | SASS | JS</p>
+                        <p>React | Firebase | REST API </p>
                        <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>
 
                         </div>
@@ -185,17 +216,18 @@
                     <li class ="project-four js-scroll">
                         
                         <div class="project-four-image">
-                            <img src='./assets/square-wow.png' alt="Image of Oh Wow Project">
+                            <img src='./assets/sun-run.png' alt="Image of Oh Wow Project">
                         </div>
                         <!-- Hidden Div for project description -->
-                        <div class="project-details">
-                            <h3>Oh Wow</h3>
+                        <div class="project-details" id="sun-run">
+                            <h3>Sun Run</h3>
 
                                 <!-- DEV ICONS -->
-                                <p>JS | REST API | HTML5 | SASS | Pair Programming</p>
+                                <p>React | REST API | HTML5 | CSS</p>
                                <button class="learn-more">Learn More<span class="fa-solid fa-angles-right"></span></button>   
                         </div>
                     </li>
+
 
                 </ul>
             </div>
@@ -211,20 +243,30 @@
                     <div class="contact-text">
                         <p>Want to reach out? Send me a message and I'll gladly get back to you.</p>
                     </div>
+.
+                    <div class= "all-contact">
+                        <ul class="social-contact">
 
-                    <form name="contact" method="POST" data-netlify="true">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="name">
+                            <!-- Font awsome social icons -->
+                            <li><a href='https://www.linkedin.com/in/joe-gencarelli-02254b16/'><span class="devicon-linkedin-plain"></span></a></li>
+                            <li><a href="https://github.com/genc1499"><span class="devicon-github-original"></span></a></li>
+                            <li><a href="https://calendly.com/joegencarelli?month=2022-06"><span class="fa-solid fa-calendar-days"></span></a></li>
+                        </ul>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="email">
+                        <form name="contact" method="POST" data-netlify="true">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="name">
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="message"></textarea>   
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="email">
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="message"></textarea>   
+                            
+                            <button id="contact-button" type="submit">Send</button>  
                         
-                        <button id="contact-button" type="submit">Send</button>  
-                       
-                    </form>
+                        </form>
+                </div>
                 </div>
             </div>
         </section>
@@ -235,13 +277,7 @@
     <footer>
         <div class="footer-content">
             <p>Designed by Joe Gencarelli</p>
-            <ul class="social-contact">
-
-                <!-- Font awsome social icons -->
-                <li><a href='https://www.linkedin.com/in/joe-gencarelli-02254b16/'><span class="devicon-linkedin-plain"></span></a></li>
-                <li><a href="https://github.com/genc1499"><span class="devicon-github-original"></span></a></li>
-                <li><a href="https://calendly.com/joegencarelli?month=2022-06"><span class="fa-solid fa-calendar-days"></span></a></li>
-            </ul>
+            
         </div>
     </footer>
 

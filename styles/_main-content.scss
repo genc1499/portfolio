@@ -1,7 +1,8 @@
 // ABOUT ME SECTION
 .about-me{
     padding:75px 0;
-    background-color: #ebebeb;
+ background-color: whitesmoke;
+
 
     .about-me-container{
         display:flex;
@@ -62,7 +63,8 @@ transition:.8s ease-in;
 
     span{
         display:inline-block;
-        font-size:2rem;
+        font-size:4rem;
+        color:#dcd6f7;
     }
 
     // Style the soft skills icon
@@ -99,7 +101,7 @@ transition:.8s ease-in;
 }
 .about-me-text{
     display:flex;
-    flex-direction:column;
+    // flex-direction:column;
     align-items: center;
     position:relative;
     transition:1s ease-in;
@@ -117,13 +119,18 @@ transition:.8s ease-in;
         transition:ease-in 1s;
     }
 
+  
+
     // Chnage width for when scroll event occurs
     .js-scroll.scrolled.image-container{
-        width:45%;
+        width:70%;
+        p{
+            animation: spin 2s linear infinite;
+        }
     }
         img{
             width:100%;
-            border-radius:50%;
+            border-radius:10px;
             box-shadow:-1px -2px 15px 2px #28282B;
         }
 
@@ -144,7 +151,7 @@ transition:.8s ease-in;
         border-radius: 10px;
         margin-top:20px;
         display:flex;
-        flex-direction: column-reverse;
+        // flex-direction: column-reverse;
         p{
         font-size:1rem;
         color:#28282B;
@@ -152,13 +159,21 @@ transition:.8s ease-in;
     }
 
 }
+.text-skills-flex{
+    display:flex;
+}
 
+.skills-section{
+    height:50vh;
+    background-color: #2c363f;
+    position:relative;
+}
 
 // My SKILLS - tech DEV ICONS
 .skills-container{
     display:flex;
     flex-direction:column;
-    align-items: center;;
+    align-items: center;
 }
 
 // Flex skills list
@@ -192,6 +207,7 @@ transition:.8s ease-in;
     position:relative;  
     top:85px;  
 }
+
     
 // List item styles
 .js-scroll.skills-list li{
@@ -200,15 +216,15 @@ transition:.8s ease-in;
 
     // Style each DEV Icon
     span{
-        color:rgba(20, 98, 129);
-        font-size:2.5rem;
+        color:#f7dd72;
+        font-size:5.5rem;
         // transition:1s ease-in; 
         position:relative;
     }
 }
 // Once list is in view, add scrolled class styles
 .js-scroll.scrolled.skills-list{
-    top:0;
+    top:50px;
 }
 
 
@@ -253,6 +269,7 @@ transition:.8s ease-in;
     box-shadow:0px 16px 15px -9px #28282B;
     border-radius:22px;
     padding-bottom: 40px;  
+   
 }
 
 span{
@@ -273,7 +290,7 @@ span{
     display:flex;
     flex-direction:column;
     justify-content: center; 
-    border:3px rgba(20, 98, 129) solid;
+    border:3px turquoise solid;
     border-radius:22px;  
     }
 
@@ -296,15 +313,16 @@ span{
     }
 
     .project-details button{
-        background-color: rgb(139, 9, 9);
-        color:white;
+        background-color: whitesmoke;
+        color:#2c363f;
         padding:8px 6px;
         width:160px;
         margin:0 auto;
-        border:none;
+        border:solid 2px #2c363f;
         border-radius:5px;
         transition: .3s ease-in-out;
         font-weight:300;
+
 
         span{
             margin-left:4px;
@@ -319,8 +337,11 @@ span{
 
 /* Hover and focus on learn more button */
 .project-details button:hover,  .project-details button:focus{
-    width:165px;
+    scale:1.01;
     box-shadow: -7px 13px 18px -4px #000000;  
+    background-color: #ff4365;
+    color:whitesmoke;
+    border:solid 2px whitesmoke;
 }
 
 // SPAN transition on button hover and focus

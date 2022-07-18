@@ -150,7 +150,7 @@
                 const myWorks = [
                     {
                         imageUrl: './assets/final-oh-wow-alert.png',
-                        html:`<p class="alert-text">A collaboration with <a href="#"> Nick Kuemmling.</a>, using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Add and remove movies to your watch list and then get another wow!</p><br>`+
+                        html:`<p class="alert-text">A paired programming project using the Owen Wilson Wow API and the MovieDB API, user's can choose a movie from a dropdown list and see and hear a classic Owen Wilson "WOW" along with the movie's description and rating. Add and remove movies to your watch list and then get another wow!</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/wowAppProject2"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://calm-eclair-5dc4c7.netlify.app/">LIVE</i></a><div>' 
 
@@ -163,14 +163,14 @@
                     },
                     {
                         imageUrl: './assets/your-extra-modal.png',
-                        html:`<p class="alert-text">Using React and Firebase, Your Extra is a news app built using the Currents API. Click each category of news and get real-time top stories. Add and remove articles to build a reading list to enjoy later!</p><br>`+
+                        html:`<p class="alert-text">Using React and Firebase, Your Extra is a simple news app built using the Currents API. Click each category of news and get real-time top stories. Add and remove articles to build a reading list to enjoy later!</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/genc1499/joe-gencarelli-project3"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://zingy-beignet-661bf4.netlify.app/">LIVE</i></a><div>' 
 
                     },
                     {
                         imageUrl: './assets/sun-run-modal.png',
-                        html:`<p class="alert-text">A group collaboration, built with React using the Sunrise-Sunset API, Sun Run is a runner's companion: start your run by sunrise or finish by sunset. Get your location with GPS or search by city, enter the date and length of your run and you're off!</p><br>`+
+                        html:`<p class="alert-text">A group collaboration, built with React using the Sunrise-Sunset API, Sun Run is a runner's companion; start your run by sunrise or finish by sunset. Get your location with GPS or search by city, enter the date and length of your run and you're off!</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/JunoSunRun/project-4-sun-run"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://sun-run.netlify.app/">LIVE</i></a><div>' 
 

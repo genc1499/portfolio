@@ -225,3 +225,42 @@
 
             })
         })
+
+        // Chanke anchor tag text content and also remove with mouse event listeners
+        const links = document.querySelectorAll('nav li a')
+        links.forEach(item =>{
+            item.addEventListener('mouseover', function(){
+                if(this.id==="my-skills")
+                {
+                    console.log(this)
+                    item.textContent="{} # [] </>";
+                    item.addEventListener('mouseleave', function(){
+                        item.textContent="Skills";
+                    })
+                }
+                if(this.id==="about-me")
+                {
+                    console.log(this)
+                    item.textContent="Joe?";
+                    item.addEventListener('mouseleave', function(){
+                        item.textContent="About";
+                    })
+                }
+                if(this.id==="my-pros")
+                {
+                    console.log(this)
+                    item.textContent="{} # [] </> in action";
+                    item.addEventListener('mouseleave', function(){
+                        item.textContent="Projects";
+                    })
+                }
+                if(this.id==="say-hi")
+                {
+                    console.log(this)
+                    item.textContent="Say Hi!";
+                    item.addEventListener('mouseleave', function(){
+                        item.textContent="Contact";
+                    })
+                }
+            })
+        })

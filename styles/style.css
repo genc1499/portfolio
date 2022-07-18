@@ -463,7 +463,7 @@ nav .slide-out-menu {
 nav .slide-out-menu a {
   color: white;
   background-color: initial;
-  transition: 0.3s ease;
+  transition: 0.3s linear;
   font-size: 1.2rem;
 }
 nav .slide-out-menu a:hover, nav .slide-out-menu a:focus {

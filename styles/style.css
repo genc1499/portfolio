@@ -252,6 +252,7 @@ html {
   font-size: 125%;
   color: #28282B;
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -453,12 +454,12 @@ nav .slide-out-menu {
   background-color: #28282B;
   overflow: hidden;
   padding: 15px 0;
-  z-index: 10;
   align-items: center;
   text-align: center;
   right: 9999px;
   align-items: center;
   margin-top: -1px;
+  z-index: 10;
 }
 nav .slide-out-menu a {
   color: white;
@@ -763,7 +764,7 @@ span {
 
 /* HIDDEN DIV WITH PROJECTS - styles for each element in the hidden DIV to follow */
 .project-details {
-  height: 0;
+  height: 100%;
   width: 100%;
   top: 0px;
   opacity: 0;
@@ -776,6 +777,7 @@ span {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1;
 }
 
 .project-details h3 {
@@ -813,7 +815,6 @@ p {
 }
 
 .my-works li:hover .project-details, .project-details li:focus .project-details {
-  height: 100%;
   opacity: 0.97;
 }
 
@@ -966,7 +967,8 @@ p {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: ivory solid 2px;
+  border-bottom: whitesmoke solid 2px;
+  color: whitesmoke;
 }
 .contact-info form input[type=text], .contact-info form input[type=email] {
   width: calc(50% - 10px);
@@ -979,17 +981,17 @@ p {
 .contact-info form ::-moz-placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: ivory;
+  color: whitesmoke;
 }
 .contact-info form :-ms-input-placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: ivory;
+  color: whitesmoke;
 }
 .contact-info form ::placeholder {
   font-size: 0.9rem;
   font-style: italic;
-  color: ivory;
+  color: whitesmoke;
 }
 .contact-info form button {
   width: 100px;
@@ -1000,7 +1002,7 @@ p {
   text-align: center;
   border-radius: 5px;
   margin: 20px 0 0 auto;
-  color: white;
+  color: whitesmoke;
   transition: 0.3s ease-in-out;
   display: inline-block;
 }
@@ -1054,7 +1056,7 @@ footer {
 footer p {
   margin: 0 auto;
   padding: 5px 0;
-  color: white;
+  color: #f7dd72;
   font-size: 0.9rem;
 }
 

@@ -379,6 +379,7 @@ header .headings-container {
 }
 header h1 {
   color: whitesmoke;
+  margin-top: 0;
 }
 header h1 span {
   color: turquoise;
@@ -399,9 +400,9 @@ header .jump-to-work {
   display: inline-block;
   width: 198px;
   background-color: transparent;
-  border: 2px ivory solid;
+  border: 2px whitesmoke solid;
   padding: 10px 20px;
-  color: ivory;
+  color: whitesmoke;
   border-radius: 5px;
   transition: 0.3s 1 ease-in;
   text-align: center;
@@ -467,6 +468,7 @@ nav .slide-out-menu a {
 }
 nav .slide-out-menu a:hover, nav .slide-out-menu a:focus {
   font-size: 1.3rem;
+  color: #f7dd72;
 }
 nav .burger-menu-button {
   display: flex;
@@ -566,28 +568,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
     transform: translateX(100%);
   }
 }
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @-webkit-keyframes pulse {
   0% {
     transform: scale(0.95);
@@ -650,10 +630,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   color: #ff4365;
 }
 
-.js-scroll.scrolled.soft-skills {
-  left: 0;
-}
-
 .text-container p {
   line-height: 27px;
 }
@@ -674,6 +650,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   width: 0%;
   position: relative;
   margin-right: 11%;
+  margin-left: 20px;
   transition: ease-in 1s;
 }
 .about-me-text .js-scroll.scrolled.image-container {
@@ -710,10 +687,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   color: #28282B;
 }
 
-.text-skills-flex {
-  display: flex;
-}
-
 .skills-section {
   background-color: #2c363f;
   position: relative;
@@ -731,27 +704,6 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
 .skills-container h2 {
   color: whitesmoke;
   margin-top: 50px;
-}
-
-.syntax {
-  display: flex;
-  -webkit-animation: 100s infinite fly;
-          animation: 100s infinite fly;
-  position: absolute;
-  justify-content: space-between;
-  font-size: 10rem;
-  opacity: 0.4;
-  z-index: 10;
-}
-
-.skills {
-  background-color: #ebebeb;
-  padding: 50px 0 25px 0;
-  margin-top: -5%;
-}
-.skills h2 {
-  margin-top: 0;
-  position: relative;
 }
 
 .js-scroll.skills-list {
@@ -812,19 +764,19 @@ span {
 
 /* HIDDEN DIV WITH PROJECTS - styles for each element in the hidden DIV to follow */
 .project-details {
-  height: auto;
-  width: 0;
+  height: 0;
+  width: 100%;
   top: 0px;
   opacity: 0;
   position: absolute;
-  transition: 0.4s ease-out;
-  background-color: whitesmoke;
+  transition: 0.4s linear;
+  background-color: #2c363f;
   border-radius: 22px;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 3px turquoise solid;
-  border-radius: 22px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .project-details h3 {
@@ -838,19 +790,21 @@ span {
 
 h3 {
   font-size: 2rem;
+  color: turquoise;
 }
 
 p {
   font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 .project-details button {
-  background-color: whitesmoke;
-  color: #2c363f;
+  background-color: transparent;
+  color: #ff4365;
   padding: 8px 6px;
   width: 160px;
   margin: 0 auto;
-  border: solid 2px #2c363f;
+  border: solid 2px #ff4365;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
   font-weight: 300;
@@ -861,17 +815,13 @@ p {
 
 .my-works li:hover .project-details, .project-details li:focus .project-details {
   height: 100%;
-  width: 100%;
-  opacity: 0.99;
+  opacity: 0.97;
 }
 
 /* Hover and focus on learn more button */
 .project-details button:hover, .project-details button:focus {
   scale: 1.01;
   box-shadow: -7px 13px 18px -4px #000000;
-  background-color: #ff4365;
-  color: whitesmoke;
-  border: solid 2px whitesmoke;
 }
 
 .project-details button:hover span, .project-details button:focus span {
@@ -893,7 +843,7 @@ p {
 }
 
 .devicon-github-original.colored, .devicon-github-original-wordmark.colored, .devicon-github-plain.colored {
-  color: rgb(20, 98, 129);
+  color: turquoise;
   font-size: 2rem;
   transition: 0.3s ease-out;
 }
@@ -905,7 +855,7 @@ p {
 }
 
 .live-link {
-  background-color: rgb(139, 9, 9);
+  background-color: #ff4365;
   color: white;
   padding: 3px 5px;
   border-radius: 5px;
@@ -924,28 +874,26 @@ p {
 }
 
 .js-scroll.project-one, .js-scroll.project-three {
-  transition: 1s ease-in-out;
+  transition: 1.3s linear;
   position: relative;
-  left: -9999px;
+  top: 300px;
   padding: 5px 0px;
   width: 40%;
 }
 .js-scroll.project-one img, .js-scroll.project-three img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 22px;
   width: 100%;
   display: block;
-}
-
-.js-scroll.project-three, .js-scroll.project-four {
-  display: flex;
+  border: 1px solid whitesmoke;
+  height: 100%;
 }
 
 .js-scroll.project-two, .js-scroll.project-four {
-  transition: 0.8s ease-in-out;
+  transition: 1.3s linear;
   width: 40%;
-  right: -9999px;
+  top: 300px;
   position: relative;
   padding: 5px 0px;
 }
@@ -955,37 +903,22 @@ p {
   border-radius: 22px;
   width: 100%;
   display: block;
+  border: 1px solid whitesmoke;
+  height: 100%;
 }
 
 .js-scroll.scrolled.project-one, .js-scroll.scrolled.project-three {
-  left: 0;
+  top: 0;
 }
 
 .js-scroll.scrolled.project-two, .js-scroll.scrolled.project-four {
-  right: 0;
+  top: 0;
 }
 
 .project-one-image, .project-two-image, .project-three-image, .project-four-image {
   width: 100%;
 }
 
-@-webkit-keyframes fly {
-  from {
-    left: -150px;
-  }
-  to {
-    left: calc(100vw + 150px);
-  }
-}
-
-@keyframes fly {
-  from {
-    left: -150px;
-  }
-  to {
-    left: calc(100vw + 150px);
-  }
-}
 .contact {
   background-color: #2c363f;
   padding: 70px 0;
@@ -1159,6 +1092,7 @@ footer p {
   }
   .about-me-text .js-scroll.image-container {
     margin-right: 0;
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 767px) {

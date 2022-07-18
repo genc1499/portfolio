@@ -31,15 +31,7 @@
     h2{
         position:relative;
     }
-    // h2:after{
-    //     content:'';
-    //     border-bottom:3px solid rgb(139, 9, 9);
-    //     width:40%;
-    //     display:inline-block;
-    //     position: absolute;
-    //     left: 59px;
-    //     bottom: -5px;
-    // }
+  
     form{
         width:50%;
         display:flex;
@@ -120,15 +112,15 @@
     flex-direction:column;
     justify-content: space-between;
     span{
-                display:inline-block;
-               font-size: 3rem;
-           color:turquoise;
-          margin:0 6px;
-            
-        }
-        span:hover, span:focus{
-                    scale:1.2;
-              }
+        display:inline-block;
+        font-size: 3rem;
+        color:turquoise;
+        margin:0 6px;
+    }
+    
+    span:hover, span:focus{
+        scale:1.2;
+    }
     
 }
 
@@ -139,31 +131,12 @@ footer{
     text-align:center;
     color:#28282B;
     padding:25px 0;
+
     p{
         margin:0 auto;
         padding:5px 0;
         color:white;
         font-size:.9rem;
     }
-
-    // .footer-content{
-    //     display:flex;
-    //     align-items:center;
-    //     flex-direction: column;
-    //     .social-contact{
-    //         display:flex;
-
-    //     }
-
-    //     span{
-    //         display:inline-block;
-    //         font-size: 1.5rem;
-    //         color:turquoise;
-    //         margin:0 6px;
-    //     }
-    //     span:hover, span:focus{
-    //         font-size:2rem;
-    //     }
-    // }
-   
+ 
 }

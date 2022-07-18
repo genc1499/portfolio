@@ -4,7 +4,6 @@
     padding:70px 0;
     position:relative;
     color:whitesmoke;
-  
 }
 .contact:before{
     content: "";
@@ -18,12 +17,17 @@
     background-size: 14058px 60px;
     background-repeat: repeat-x;
    top: -60px;
- 
-    }
+}
+
 .contact-info{
     display:flex;
     align-items:center;
     flex-direction:column;
+    
+    .contact-text{
+        margin-bottom:20px;
+    }
+ 
     label{
         visibility:hidden;
         position:absolute;

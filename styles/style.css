@@ -944,6 +944,9 @@ p {
   align-items: center;
   flex-direction: column;
 }
+.contact-info .contact-text {
+  margin-bottom: 20px;
+}
 .contact-info label {
   visibility: hidden;
   position: absolute;

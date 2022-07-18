@@ -8,6 +8,7 @@
         display:flex;
         flex-direction: column;
         align-items:center;
+     
     }
     // About me H2
     .about-heading{
@@ -17,31 +18,32 @@
 
     .skills-image-text-container{
         display:flex;
+      
     }
 
     .about-me-text{
         display:flex;
+        background-color:whitesmoke;
+        width:100%;
     }
 
 
 // Soft skills icons beside image - place off screen for javascript scroll event
 }
 
-.js-scroll.soft-skills{
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-margin-right:12%;
-left:999px;
-position:relative;
-transition:.8s ease-in;
-
+.rotate{
+    font-size:8rem;
+    display:flex;
+    flex-direction:column;
+    width:25%;
 }
 
 .about-em{
-    font-size:1.2rem;
-    color:turquoise;
-    font-style:bold;
+    scale:1.2;
+    color:#ff4365;
+    
+   
+
 }
 
 // Transition soft skills in with JS scroll event handler
@@ -52,11 +54,7 @@ transition:.8s ease-in;
 }
 
 
-.soft-photo{
-    display:flex;
-    flex-direction: row-reverse;
-    width:80%;
-}
+
 
 .text-container p{
     line-height:27px;
@@ -64,15 +62,18 @@ transition:.8s ease-in;
 
 .about-me-text{
     display:flex;
-    // flex-direction:column;
     align-items: center;
     position:relative;
     transition:1s ease-in;
     background-color: whitesmoke;
     padding:50px;
     border-radius: 10px;
-    box-shadow:0px 16px 15px -6px #28282B;
-    width:75%;
+    // box-shadow:0px 16px 15px -6px turquoise;
+  
+   
+    box-shadow: 8px 0px 0px 0px #ff4365, 0px 8px 0px 0px #f7dd72, -8px 0px 0px 0px turquoise, 0px 0px 0px 8px #2c363f, 5px 5px 15px 5px black;
+    width:20%;
+    color:whitesmoke;
 
     // Style image container
     .js-scroll.image-container{
@@ -86,7 +87,7 @@ transition:.8s ease-in;
 
     // Chnage width for when scroll event occurs
     .js-scroll.scrolled.image-container{
-        width:80%;
+        width:40%;
         p{
             animation: spin 2s linear infinite;
         }
@@ -114,7 +115,8 @@ transition:.8s ease-in;
         border-radius: 10px;
         margin-top:20px;
         display:flex;
-        // flex-direction: column-reverse;
+        border-top: 2px dotted #2c363f;
+        border-bottom: 2px dotted #2c363f;
         p{
         font-size:1rem;
         color:#28282B;
@@ -151,7 +153,17 @@ transition:.8s ease-in;
       
     }
 }
+.syntax{
 
+    display:flex;
+    animation:100s infinite fly;
+    position:absolute;
+    justify-content: space-between;
+    font-size: 10rem;
+    opacity:.4;
+    z-index:10;
+
+}
 // Flex skills list
 
 .skills{
@@ -406,6 +418,16 @@ span{
     width:100%;
  
 }
+
+@keyframes fly {
+    from {
+            left: -150px;
+        }
+    
+        to {
+            left: calc(100vw + 150px);
+        }
+    }
     
    
 

@@ -44,6 +44,17 @@
     }
 
 }
+
+@media only screen and (max-width:820px){
+    .about-me-text{
+        flex-direction:column;
+        .js-scroll.image-container{
+            margin-right:0;
+        }
+    
+    }
+   
+}
 @media only screen and (max-width:767px){
     header{
     .headings-container{
@@ -58,15 +69,8 @@
             width:100%;
         }
     }
-    .soft-photo{
-        width:100%;
-    }
-
-    // .js-scroll.skills-list li{
-    //    margin:60px 0px;
-    
-    // }
-
+  
+  
     // Change contact information and form width
     .contact-info{
         // Set new width for contact text and form 
@@ -89,9 +93,6 @@
         width:90%;
     }
   
-    .soft-photo{
-        flex-direction:column-reverse;
-    }
     .about-me-text{
         // About me text width
         .text-container{
@@ -99,7 +100,7 @@
         }
         // Image width
         .js-scroll.scrolled.image-container{
-            width:100%;
+            width:70%;
          
         }
     }
@@ -173,6 +174,15 @@
                 font-size:1.2rem;
     
             }
+        }
+    }
+
+    .about-me-text{
+    
+        // Image width
+        .js-scroll.scrolled.image-container{
+            width:85%;
+         
         }
     }
 

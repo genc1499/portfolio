@@ -161,7 +161,7 @@ nav{
         background-color:#28282B; 
         overflow: hidden;
         padding:15px 0;
-    
+        z-index:10;
         align-items:center;
         text-align:center;
         right:9999px;
@@ -191,7 +191,7 @@ nav{
         right:25px;
         top:25px;
         color:white;
-        z-index:10;
+        z-index:100;
         transition:.4s linear;
         transform:rotate(90deg);
         position: fixed;

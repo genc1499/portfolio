@@ -71,7 +71,7 @@
     // box-shadow:0px 16px 15px -6px turquoise;
   
    
-    box-shadow: 8px 0px 0px 0px #ff4365, 0px 8px 0px 0px #f7dd72, -8px 0px 0px 0px turquoise, 0px 0px 0px 8px #2c363f, 5px 5px 15px 5px black;
+    box-shadow: 8px 0px 0px 0px #ff4365, 0px 8px 0px 0px #f7dd72, -8px 0px 0px 0px turquoise, 0px 0px 0px 8px turquoise, 5px 5px 15px 5px black;
     width:20%;
     color:whitesmoke;
 
@@ -133,7 +133,7 @@
     position:relative;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
-    border: 2px solid #f7dd72;
+    border: 2px solid turquoise;
 
 }
 

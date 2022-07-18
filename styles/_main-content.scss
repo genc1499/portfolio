@@ -1,7 +1,7 @@
 // ABOUT ME SECTION
 .about-me{
     padding:75px 0;
- background-color: whitesmoke;
+ background-color: white;
 
 
     .about-me-container{
@@ -67,10 +67,10 @@
     transition:1s ease-in;
     background-color: whitesmoke;
     padding:50px;
-    border-radius: 10px;
+    // border-radius: 10px;
     // box-shadow:0px 16px 15px -6px turquoise;
   
-   
+   border-radius: 10% 100% 10% 100% / 100% 10% 96% 10%;
     box-shadow: 8px 0px 0px 0px #ff4365, 0px 8px 0px 0px #f7dd72, -8px 0px 0px 0px turquoise, 0px 0px 0px 8px turquoise, 5px 5px 15px 5px black;
     width:20%;
     color:whitesmoke;
@@ -133,7 +133,7 @@
     position:relative;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
-    border: 2px solid turquoise;
+    border-radius:0% 100% 0% 100% / 84% 15% 85% 16% ;
 
 }
 

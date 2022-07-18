@@ -134,10 +134,22 @@
    }
             })
         }  
+
+        // Add event throttling so the scroll event aren't bouncy
         // Add event listner onto window, which will call the event handler function 
+        let scrolling = false;
         window.addEventListener('scroll', () => {
-            handleScrollAnimation();
-        })
+            // handleScrollAnimation();
+            scrolling = true;
+        });
+
+
+        setInterval(() => {
+            if (scrolling) {
+                scrolling = false;
+                handleScrollAnimation();
+            }
+        },300);
 
         // Select all buttons in the portfolio section
         const alertButtons=document.querySelectorAll('.learn-more');

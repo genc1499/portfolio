@@ -104,12 +104,6 @@
         }
     }
    
-   
-    // .js-scroll.skills-list li{
-    //     padding:10px 10px;
-    // }
-
-  
     // Chnage portfolio items direction and width
     .my-works{
         flex-direction:column;
@@ -152,14 +146,34 @@
         }
     }
 
-}
-
-@media only screen and (max-width:460px){
     header{
         .headings-container{
+            h1{
+                font-size:2.5rem;
+                margin-bottom: 50px;
+            }
             h2{
                 font-size:1.5rem;
+    
             }
         }
     }
+
+}
+
+@media only screen and (max-width:460px){
+
+    header{
+        .headings-container{
+            h1{
+                font-size:1.8rem;
+                margin-bottom: 50px;
+            }
+            h2{
+                font-size:1.2rem;
+    
+            }
+        }
+    }
+
 }

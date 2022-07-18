@@ -1,6 +1,7 @@
 
 
-
+ // Select the burger menu class
+ const burgerMenu=document.querySelector('.burger-menu-button')
 // Function to remove "curtains" and display h2 'front end developer'
         setTimeout(()=>{
             const line1 = document.querySelector('.line1');
@@ -9,13 +10,13 @@
             line1.style.visibility="hidden";
             line2.style.visibility="hidden";
             slideInHeading.style.left="0";
+            burgerMenu.style.opacity="1";
 
         },1300);
 
          // Slide out menu
 
-        // Select the burger menu class
-        const burgerMenu=document.querySelector('.burger-menu-button')
+       
 
         // Decalre a variable to keep track of menu open/close status
         let clicked=true;
@@ -159,6 +160,20 @@
                         html:`<p class="alert-text">Bar-One is a fully responsive and multi-page website. Using designer provided PDFs, great attention to detail was pivitol in bringing the chic qualities of the Bar-One brand to life on the web.</p><br>`+
                         `<div class="link-container"><a class = "git-hub-link" href="https://github.com/genc1499/joe-gencarelli-project1"><i class="devicon-github-original colored"></i></a> `+
                         '<a class="live-link" href="https://subtle-cucurucho-8e92a2.netlify.app/index.html">LIVE</i></a><div>' 
+                    },
+                    {
+                        imageUrl: './assets/your-extra-modal.png',
+                        html:`<p class="alert-text">Using React and Firebase, Your Extra is a news app built using the Currents API. Click each category of news and get real-time top stories. Add and remove articles to build a reading list to enjoy later!</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://github.com/genc1499/joe-gencarelli-project3"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://zingy-beignet-661bf4.netlify.app/">LIVE</i></a><div>' 
+
+                    },
+                    {
+                        imageUrl: './assets/sun-run-modal.png',
+                        html:`<p class="alert-text">A group collaboration, built with React using the Sunrise-Sunset API, Sun Run is a runner's companion: start your run by sunrise or finish by sunset. Get your location with GPS or search by city, enter the date and length of your run and you're off!</p><br>`+
+                        `<div class="link-container"><a class = "git-hub-link" href="https://github.com/JunoSunRun/project-4-sun-run"><i class="devicon-github-original colored"></i></a> `+
+                        '<a class="live-link" href="https://sun-run.netlify.app/">LIVE</i></a><div>' 
+
                     }
                 ];
 
@@ -186,17 +201,27 @@
                     }); 
                 }
 
-
-                else{
+                else if(e.target.parentElement.id==="your-extra"){
                     Swal.fire({
-                        imageUrl: myWorks[0].imageUrl,
-                        imageWidth:'400',
+                        imageUrl: myWorks[2].imageUrl,
+                        imageWidth:'550',
                         showCloseButton: true,
                         showCancelButton: false,
                         showConfirmButton: false,
-                        html:myWorks[0].html
+                        html:myWorks[2].html
                     }); 
                 }
-     
+
+                else if(e.target.parentElement.id==="sun-run"){
+                    Swal.fire({
+                        imageUrl: myWorks[3].imageUrl,
+                        imageWidth:'550',
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        html:myWorks[3].html
+                    }); 
+                }
+
             })
         })

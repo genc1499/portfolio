@@ -225,7 +225,8 @@ transition:.8s ease-in;
     width:80%;
     box-shadow:0px 16px 15px -9px #28282B;
     border-radius:22px;
-    padding-bottom: 40px;    
+    padding-bottom: 40px; 
+    
 }
 
 span{
@@ -361,17 +362,21 @@ span{
 
 .js-scroll.project-one, .js-scroll.project-three{
     transition: 1s ease-in-out; 
-    width:40%;
     position:relative;
     left:-9999px;
     padding:5px 0px;
-    height:auto;
+    width:40%;
     
     img{
-        object-fit: contain;
+        object-fit: scale-down;
         border-radius:22px;
         width:100%;
+        display:block;
     }
+}
+
+.js-scroll.project-three, .js-scroll.project-four{
+    display:flex;
 }
 
 .js-scroll.project-two, .js-scroll.project-four {
@@ -380,11 +385,12 @@ span{
     right:-9999px;
     position:relative;
     padding:5px 0px;
-    height:auto;
+   
     img{
-        object-fit: contain;
+        object-fit: cover;
         border-radius:22px;
         width:100%;
+        display:block;
     }
 }
 

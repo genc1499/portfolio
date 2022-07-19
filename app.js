@@ -3,7 +3,9 @@ const joe = {};
 
     joe.init=()=>{
         joe.burgerMenu=document.querySelector('.burger-menu-button'); 
+        joe.slideOutMenu=document.querySelector('.slide-out-menu');
         joe.links = document.querySelectorAll('nav li a');
+        joe.clicked=true;
         joe.curtainFunction();
         joe.dominoMF();
         joe.showModal();
@@ -29,7 +31,7 @@ const joe = {};
         }
 
     joe.displayMenu=()=>{
-        joe.slideOutMenu=document.querySelector('.slide-out-menu')
+       
         if(window.innerWidth>=767){
 
             joe.slideOutMenu.style.transitionDelay= '.3s';
@@ -45,6 +47,7 @@ const joe = {};
             joe.slideOutMenu.style.top= '1px';
             joe.slideOutMenu.style.right= '0px';
         }
+        joe.clicked=false;
         joe.anchorChange();
         joe.anchorClick();
       
@@ -52,25 +55,31 @@ const joe = {};
     }
 
     joe.anchorClick = ()=>{
+        joe.links.forEach(item =>{
+            item.addEventListener('click', ()=>{
+                joe.closeMenu();
+            })
+        })
+    }
+
+    joe.closeMenu = () =>{
         const top = document.querySelector('.o');
         const middle = document.querySelector('.b');
         const bottom = document.querySelector('.d');
-        joe.links.forEach(item =>{
-            item.addEventListener('click', ()=>{
-                middle.style.transform="revert";
-                top.style.transform="revert";
-                bottom.style.transform="revert";
-                joe.slideOutMenu.style.height= '0';
-                joe.slideOutMenu.style.top= '-50px';
-            })
-        })
+        middle.style.transform="revert";
+        top.style.transform="revert";
+        bottom.style.transform="revert";
+        joe.slideOutMenu.style.height= '0';
+        joe.slideOutMenu.style.top= '-50px';
+        joe.clicked=true;
+
     }
 
     // Slide out menu
 
     joe.dominoMF=()=>{
         // Decalre a variable to keep track of menu open/close status
-        let clicked=true;
+       
 
         // Add an event listner to the burger menu class
         joe.burgerMenu.addEventListener('click', ()=>{
@@ -82,7 +91,7 @@ const joe = {};
         
                 
                 // If true - open slide out menu
-                if(clicked===true){
+                if(joe.clicked===true){
         
                 // Domino effect on hamburger menu
                     top.style.transform="rotate(-75deg) translateX(-5px) translateY(5px)";
@@ -91,24 +100,15 @@ const joe = {};
                     bottom.style.transitionDelay=".2s";
                     bottom.style.transform="rotate(-90deg) translateX(-5px) translateY(5px)";
 
-                    clicked=false;
+                   
                     joe.displayMenu();
                 }
 
                 // If false, menu slides out
                 else{
-                    // Revert back to burger menu button
-                    middle.style.transform="revert";
-                    top.style.transform="revert";
-                    bottom.style.transform="revert";
-
-                    //Bring slide out menu off screen
-                    joe.slideOutMenu.style.height= '0';
-                    joe.slideOutMenu.style.top= '-50px';
-                    // Re-assign clicked to true    
-                    clicked=true;
-
-                   
+                  
+                    joe.closeMenu();
+                  
                 }
             })
         }

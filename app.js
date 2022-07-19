@@ -3,6 +3,7 @@ const joe = {};
 
     joe.init=()=>{
         joe.burgerMenu=document.querySelector('.burger-menu-button'); 
+        joe.links = document.querySelectorAll('nav li a');
         joe.curtainFunction();
         joe.dominoMF();
         joe.showModal();
@@ -45,7 +46,24 @@ const joe = {};
             joe.slideOutMenu.style.right= '0px';
         }
         joe.anchorChange();
+        joe.anchorClick();
+      
 
+    }
+
+    joe.anchorClick = ()=>{
+        const top = document.querySelector('.o');
+        const middle = document.querySelector('.b');
+        const bottom = document.querySelector('.d');
+        joe.links.forEach(item =>{
+            item.addEventListener('click', ()=>{
+                middle.style.transform="revert";
+                top.style.transform="revert";
+                bottom.style.transform="revert";
+                joe.slideOutMenu.style.height= '0';
+                joe.slideOutMenu.style.top= '-50px';
+            })
+        })
     }
 
     // Slide out menu
@@ -89,6 +107,8 @@ const joe = {};
                     joe.slideOutMenu.style.top= '-50px';
                     // Re-assign clicked to true    
                     clicked=true;
+
+                   
                 }
             })
         }
@@ -242,12 +262,11 @@ const joe = {};
         // Change anchor tag text content and also remove with mouse event listeners
 
         joe.anchorChange=()=>{
-            const links = document.querySelectorAll('nav li a')
-            links.forEach(item =>{
+            joe.links.forEach(item =>{
                 item.addEventListener('mouseover', function(){
                     if(this.id==="my-skills")
                     {
-                        item.style.transition="10s"
+        
                         item.textContent="[ {} </> ]";
                         item.addEventListener('mouseleave', function(){
                             item.textContent="Skills";

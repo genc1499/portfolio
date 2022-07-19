@@ -714,7 +714,7 @@ nav .burger-menu-button:hover.burger-menu-button, nav .burger-menu-button:focus.
   margin: 0 auto;
   transition: 0.7s ease;
   position: relative;
-  top: 300px;
+  top: 200px;
   margin-bottom: 60px;
 }
 
@@ -876,7 +876,7 @@ p {
 .js-scroll.project-one, .js-scroll.project-three {
   transition: 0.4s linear;
   position: relative;
-  top: 300px;
+  top: 200px;
   padding: 5px 0px;
   width: 40%;
 }
@@ -893,7 +893,7 @@ p {
 .js-scroll.project-two, .js-scroll.project-four {
   transition: 0.4s linear;
   width: 40%;
-  top: 300px;
+  top: 200px;
   position: relative;
   padding: 5px 0px;
 }

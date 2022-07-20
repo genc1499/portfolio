@@ -10,10 +10,11 @@ const joe = {};
         joe.dominoMF();
         joe.showModal();
         joe.scrollTrigger();
+       
     }
 
     joe.curtainFunction=()=>{
-
+    
         // Function to remove "curtains" and display h2 'front end developer'
         setTimeout(()=>{
             const line1 = document.querySelector('.line1');
@@ -23,9 +24,10 @@ const joe = {};
             line2.style.visibility="hidden";
             slideInHeading.style.left="0";
             joe.getBurger();
-        },1300);
-    }
-
+       },1200);
+     }
+    
+    
     joe.getBurger=()=>{
             joe.burgerMenu.style.opacity="1";
         }

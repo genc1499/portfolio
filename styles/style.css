@@ -334,11 +334,20 @@ header .line1, header .line2 {
   z-index: 100;
   background-color: #2c363f;
   position: absolute;
+  top: 0;
+}
+header .line1 div, header .line2 div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
 }
 header .line1 p, header .line2 p {
   font-size: 5rem;
   color: whitesmoke;
   font-family: "Source Code Pro", monospace;
+  margin-top: 0;
 }
 header .line1 {
   left: 0;
@@ -350,12 +359,6 @@ header .line1 {
           animation-timing-function: ease-out;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
-  justify-content: flex-end;
-  align-items: center;
-}
-header .line1 p {
-  text-align: right;
-  border-radius: 25%;
 }
 header .line2 {
   right: 0;
@@ -367,8 +370,9 @@ header .line2 {
           animation-timing-function: ease-out;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+}
+header .line2 div {
   justify-content: flex-start;
-  align-items: center;
 }
 header .headings-container {
   align-self: center;
